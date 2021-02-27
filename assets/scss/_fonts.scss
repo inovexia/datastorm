@@ -1,33 +1,53 @@
 @font-face {
   font-family: $sf-h;
-  src: url('../fonts/SF-Heavy/sf-pro-display-heavy.woff2') format('woff2'),
-    url('../fonts/SF-Heavy/sf-pro-display-heavy.woff') format('woff');
+  src: url("../fonts/SF-Heavy/sf-pro-display-heavy.woff2") format("woff2"),
+    url("../fonts/SF-Heavy/sf-pro-display-heavy.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: $sf-m;
-  src: url('../fonts/SF-Medium/sf-pro-display-medium.woff2') format('woff2'),
-    url('../fonts/SF-Medium/sf-pro-display-medium.woff') format('woff');
+  src: url("../fonts/SF-Medium/sf-pro-display-medium.woff2") format("woff2"),
+    url("../fonts/SF-Medium/sf-pro-display-medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: $sf-l;
-  src: url('../fonts/SF-Light/sf-pro-display-light.woff2') format('woff2'),
-    url('../fonts/SF-Light/sf-pro-display-light.woff') format('woff');
+  src: url("../fonts/SF-Light/sf-pro-display-light.woff2") format("woff2"),
+    url("../fonts/SF-Light/sf-pro-display-light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: $sf-b;
-  src: url('../fonts/SF-Bold/sf-pro-display-bold.woff2') format('woff2'),
-    url('../fonts/SF-Bold/sf-pro-display-bold.woff') format('woff');
+  src: url("../fonts/SF-Bold/sf-pro-display-bold.woff2") format("woff2"),
+    url("../fonts/SF-Bold/sf-pro-display-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: $sf-sb;
+  src: url("../fonts/SF-Semibold/sf-pro-display-semibold.woff2") format("woff2"),
+    url("../fonts/SF-Semibold/sf-pro-display-semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: $sf-black;
+  src: url("../fonts/SF-Black/sf-pro-display-black.woff2") format("woff2"),
+    url("../fonts/SF-Black/sf-pro-display-black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.sf-black {
+  font-family: $sf-black;
+}
 .sf-b {
   font-family: $sf-b;
+}
+.sf-sb {
+  font-family: $sf-sb;
 }
 .sf-l {
   font-family: $sf-l;

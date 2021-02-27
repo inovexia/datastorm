@@ -15712,8 +15712,30 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SF-SB";
+  src: url("../fonts/SF-Semibold/sf-pro-display-semibold.woff2") format("woff2"), url("../fonts/SF-Semibold/sf-pro-display-semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Black";
+  src: url("../fonts/SF-Black/sf-pro-display-black.woff2") format("woff2"), url("../fonts/SF-Black/sf-pro-display-black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sf-black {
+  font-family: "SF-Black";
+}
+
 .sf-b {
   font-family: "SF-B";
+}
+
+.sf-sb {
+  font-family: "SF-SB";
 }
 
 .sf-l {
@@ -15729,6 +15751,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (min-width: 0) {
+  body {
+    background-color: #f0f0f0;
+  }
   #header {
     padding-top: 50px;
   }
@@ -15739,6 +15764,8 @@ a.text-dark:hover, a.text-dark:focus {
   #header .navbar .navbar-brand {
     color: #ffffff;
     font-size: 30px;
+    line-height: 30px;
+    padding: 0px;
   }
   #header .navbar .collapse .navbar-nav li {
     margin-left: 0px;
@@ -15789,6 +15816,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .form-section {
     background-color: #f0f0f0;
+    padding-bottom: 220px;
   }
   .form-section .area-check-form {
     max-width: 1441px;
@@ -15797,7 +15825,7 @@ a.text-dark:hover, a.text-dark:focus {
             box-shadow: 7px 7px 35px #00000031;
     background-color: #fff;
     position: relative;
-    padding: 75px 45px;
+    padding: 94px 45px 70px;
   }
   .form-section .area-check-form form .one-fourth {
     width: 20%;
@@ -15806,7 +15834,7 @@ a.text-dark:hover, a.text-dark:focus {
   .form-section .area-check-form form .one-fourth .form-group label {
     color: #969696;
     font-size: 15px;
-    font-family: 'SF-M';
+    font-family: "SF-M";
     padding: 0px;
     margin: 0px;
   }
@@ -15820,7 +15848,7 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 20px;
     padding: 5px 0px;
     color: #2c2c2c;
-    font-family: 'SF-B';
+    font-family: "SF-B";
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -15832,7 +15860,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .form-section .area-check-form form .one-fourth .form-group #province option {
     padding: 0px;
-    font-family: 'SF-B';
+    font-family: "SF-B";
   }
   .form-section .area-check-form form .one-fourth .check-btn {
     padding: 20px 58px;
@@ -15841,8 +15869,37 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #707070;
     font-size: 18px;
   }
+  .form-section .production-history {
+    padding-top: 170px;
+  }
   .form-section .production-history .production-left-part {
     width: 44.5%;
+    padding-top: 126px;
+    padding-right: 50px;
+  }
+  .form-section .production-history .production-left-part h2 {
+    font-size: 42px;
+    font-family: "SF-H";
+    color: #292929;
+  }
+  .form-section .production-history .production-left-part p {
+    font-size: 23px;
+    color: #a2a2a2;
+    font-family: "SF-M";
+    padding-top: 54px;
+  }
+  .form-section .production-history .production-left-part .explore-btn {
+    font-size: 29px;
+    color: #292929;
+    font-family: "SF-SB";
+    text-decoration: none;
+    margin-top: 100px;
+    display: block;
+  }
+  .form-section .production-history .production-left-part .explore-btn i {
+    font-size: 20px;
+    margin-left: 24px;
+    font-weight: bold;
   }
   .form-section .production-history .production-right-part {
     width: 55.5%;
@@ -15859,6 +15916,122 @@ a.text-dark:hover, a.text-dark:focus {
   .form-section .production-history .production-right-part .w-100 .second-grid .gal-img {
     margin: 15px 0px;
   }
+  .product-history-parallax {
+    height: 693px;
+    background-position: center center;
+    background-size: 100% cover;
+    background-repeat: no-repeat;
+  }
+  .product-history-parallax .container .parallax-content {
+    max-width: 710px;
+    padding-top: 159px;
+  }
+  .product-history-parallax .container .parallax-content h2 {
+    font-size: 62px;
+    color: #fff;
+  }
+  .product-history-section {
+    padding: 173px 0px;
+  }
+  .product-history-section .row .parallax-content {
+    max-width: 550px;
+  }
+  .product-history-section .row .parallax-content h2 {
+    font-size: 45px;
+    color: #292929;
+    padding-bottom: 44px;
+  }
+  .product-history-section .row .product-history .swiper-wrapper .swiper-slide .product-card {
+    position: relative;
+    -webkit-box-shadow: 5px 5px 14px #0000001a;
+            box-shadow: 5px 5px 14px #0000001a;
+    overflow: hidden;
+  }
+  .product-history-section .row .product-history .swiper-wrapper .swiper-slide .product-card .bg-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9;
+  }
+  .product-history-section .row .product-history .swiper-wrapper .swiper-slide .product-card .product-card-body .product-image {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+  .product-history-section .row .product-history .swiper-wrapper .swiper-slide .product-card .product-card-body .cellular-tower-maintenance {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    color: #fff;
+    font-size: 32px;
+    font-family: "SF-SB";
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    left: 34px;
+  }
+  .product-history-section .row .product-history .swiper-wrapper .swiper-slide .product-card .product-card-body span {
+    position: absolute;
+    bottom: 77px;
+    font-size: 20px;
+    font-family: "SF-L";
+    color: #fff;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    left: -30px;
+  }
+  .trusted-parteners {
+    padding: 100px 0px;
+  }
+  .trusted-parteners .container .row .trusted-partener-left {
+    width: 37.5%;
+    border-right: 3px solid #e6e6e6;
+  }
+  .trusted-parteners .container .row .trusted-partener-left .content-area {
+    padding: 50px 0px;
+  }
+  .trusted-parteners .container .row .trusted-partener-left .content-area h2 {
+    font-size: 48px;
+    color: #292929;
+    font-family: "SF-Black";
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  .trusted-parteners .container .row .trusted-partener-left .content-area p {
+    max-width: 409px;
+    font-size: 25px;
+    font-family: "SF-SB";
+    color: #686868;
+  }
+  .trusted-parteners .container .row .trusted-partener-right {
+    width: 62.5%;
+  }
+  .trusted-parteners .container .row .trusted-partener-right .row {
+    padding: 40px 0px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .dream-furniture {
+    padding: 145px 0px;
+  }
+  .dream-furniture .container .dream-furniture-content {
+    border-bottom: 3px solid #929394;
+    padding-bottom: 38px;
+  }
+  .dream-furniture .container .dream-furniture-content .content-area {
+    max-width: 1378px;
+  }
+  .dream-furniture .container .dream-furniture-content .content-area h3 {
+    font-size: 54px;
+    color: #292929;
+    font-family: "SF-Black";
+    line-height: 65px;
+    margin: 0px;
+  }
+  .dream-furniture .container .dream-furniture-content .content-area h3 span {
+    color: #cf7148;
+  }
   .container {
     max-width: 1240px;
   }
@@ -15866,7 +16039,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (min-width: 768px) {
   #header {
-    padding-top: 63px;
+    padding-top: 59px;
   }
   #header .navbar .collapse .navbar-nav li {
     margin-left: 32px;
@@ -15875,6 +16048,7 @@ a.text-dark:hover, a.text-dark:focus {
   .home-banner {
     height: 650px;
     background-position: center center;
+    background-size: auto 100%;
   }
 }
 
@@ -15892,6 +16066,27 @@ a.text-dark:hover, a.text-dark:focus {
   .home-banner {
     background-position: center center;
     height: 990px;
+  }
+  .production-history .production-left-part h2 {
+    font-size: 62px;
+  }
+  .product-history-section .row .product-history .swiper-wrapper .swiper-slide .product-card .product-card-body .cellular-tower-maintenance {
+    font-size: 39px;
+  }
+  .trusted-parteners {
+    padding: 215px 0px;
+  }
+  .trusted-parteners .container .row .trusted-partener-left .content-area h2 {
+    font-size: 65px;
+  }
+  .dream-furniture {
+    padding: 145px 0px;
+  }
+  .dream-furniture .container .dream-furniture-content .content-area {
+    max-width: 1378px;
+  }
+  .dream-furniture .container .dream-furniture-content .content-area h3 {
+    font-size: 65px;
   }
   .container {
     max-width: 1598px;
