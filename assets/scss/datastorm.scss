@@ -5,7 +5,7 @@
     background-color: #f0f0f0;
   }
   #header {
-    padding-top: 50px;
+    padding-top: 0px;
     .navbar {
       max-width: 1240px;
       margin: 0px auto;
@@ -17,22 +17,16 @@
       }
       .collapse {
         .navbar-nav {
+          justify-content: space-evenly;
           li {
             margin-left: 0px;
             padding: 5px 0px;
             a {
-              font-size: 21px;
+              font-size: 25px;
               color: #ffffff;
-              font-family: $sf-m;
-              letter-spacing: 0.1px;
+              font-family: $i-m;
+              letter-spacing: 0.13px;
               padding: 0px;
-            }
-            span {
-              i {
-                display: table-cell;
-                vertical-align: middle;
-                font-size: 18px;
-              }
             }
           }
         }
@@ -41,20 +35,49 @@
   }
 
   .home-banner {
+    max-width: 1920px;
+    margin: 0px auto;
     height: 500px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 75% center;
+    .h-line {
+      width: 1px;
+      background-color: #ffffff1a;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    .h-line1 {
+      left: 10%;
+    }
+    .h-line2 {
+      left: 26%;
+    }
+    .h-line3 {
+      left: 42%;
+    }
+    .h-line4 {
+      right: 42%;
+    }
+    .h-line5 {
+      right: 26%;
+    }
+    .h-line6 {
+      right: 10%;
+    }
     .banner-content {
       position: absolute;
-      top: 30%;
-      max-width: 646px;
+      top: 320px;
+      max-width: 920px;
+      z-index: 9;
       h1 {
-        font-size: 70px;
+        font-size: 88px;
         margin: 0px;
+        line-height: 88px;
       }
       p {
-        max-width: 519px;
+        max-width: 657px;
         font-size: 23px;
         line-height: 32px;
         padding-top: 15px;
@@ -68,6 +91,37 @@
         background-color: #fff;
         margin-top: 35px;
         text-decoration: none;
+      }
+    }
+    .banner-content-bottom {
+      position: absolute;
+      bottom: 65px;
+      .row {
+        .latest-project {
+          margin-right: 113px;
+        }
+        span {
+          font-size: 17px;
+          font-family: $i-b;
+          color: #676767;
+        }
+        a {
+          font-size: 17px;
+          font-family: $i-b;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .sticky-btn {
+      right: 32px;
+      top: 50%;
+      color: #fff;
+      transform: rotate(90deg);
+      span {
+        font-size: 17px;
+        font-family: $i-b;
+        color: #fff;
       }
     }
   }
@@ -318,7 +372,7 @@
 }
 @media (min-width: 768px) {
   #header {
-    padding-top: 59px;
+    padding-top: 0px;
     .navbar {
       .collapse {
         .navbar-nav {
@@ -339,7 +393,7 @@
 @media (min-width: 992px) {
   .home-banner {
     background-position: center center;
-    height: 700px;
+    height: 1079px;
   }
 }
 @media (min-width: 1200px) {
@@ -347,14 +401,17 @@
 @media (min-width: 1440px) {
 }
 @media (min-width: 1600px) {
+  .navbar {
+    max-width: 1510px !important;
+  }
 }
 @media (min-width: 1920px) {
-  .navbar {
-    max-width: 1598px !important;
-  }
   .home-banner {
     background-position: center center;
-    height: 990px;
+    height: 1079px;
+    .container {
+      max-width: 1510px;
+    }
   }
   .production-history {
     .production-left-part {

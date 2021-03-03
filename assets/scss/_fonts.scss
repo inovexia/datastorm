@@ -40,6 +40,26 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: $i-m;
+  src: url("../fonts/Inter-Medium/inter-medium.woff2") format("woff2"),
+    url("../fonts/Inter-Medium/inter-medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: $i-b;
+  src: url("../fonts/Inter-Bold/inter-bold.woff2") format("woff2"),
+    url("../fonts/Inter-Bold/inter-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.i-m {
+  font-family: $i-m;
+}
+.i-b {
+  font-family: $i-b;
+}
 .sf-black {
   font-family: $sf-black;
 }
