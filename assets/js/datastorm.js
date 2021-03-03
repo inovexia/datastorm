@@ -10,14 +10,6 @@
         delay: 3500,
         disableOnInteraction: false,
       },
-
-      coverflow: {
-        rotate: 40,
-        stretch: 0,
-        depth: 50,
-        modifier: 1,
-        slideShadows: true,
-      },
       breakpoints: {
         640: {
           slidesPerView: 1.1,

@@ -16728,7 +16728,7 @@ button.swiper-pagination-bullet {
     text-decoration: none;
   }
   .home-banner .sticky-btn {
-    right: 32px;
+    right: -32px;
     top: 50%;
     color: #fff;
     -webkit-transform: rotate(90deg);
