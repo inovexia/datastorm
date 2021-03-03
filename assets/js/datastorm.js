@@ -35,11 +35,5 @@
         },
       },
     });
-    new Swiper(".swiper-container", {
-      direction: "vertical",
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-    });
   });
 })(jQuery);

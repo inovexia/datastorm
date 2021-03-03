@@ -16741,6 +16741,7 @@ button.swiper-pagination-bullet {
   }
   .form-section {
     background-color: #f0f0f0;
+    padding-top: 163px;
     padding-bottom: 220px;
   }
   .form-section .area-check-form {
@@ -16793,9 +16794,6 @@ button.swiper-pagination-bullet {
     color: #fff;
     border: 1px solid #707070;
     font-size: 18px;
-  }
-  .form-section .production-history {
-    padding-top: 170px;
   }
   .form-section .production-history .production-left-part {
     width: 44.5%;
