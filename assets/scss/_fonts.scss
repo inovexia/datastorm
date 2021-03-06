@@ -54,11 +54,31 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: $i-eb;
+  src: url("../fonts/Inter-Ebold/inter-extrabold.woff2") format("woff2"),
+    url("../fonts/Inter-Ebold/inter-extrabold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: $i-l;
+  src: url("../fonts/Inter-Light/inter-light-beta.woff2") format("woff2"),
+    url("../fonts/Inter-Light/inter-light-beta.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .i-m {
   font-family: $i-m;
 }
 .i-b {
   font-family: $i-b;
+}
+.i-eb {
+  font-family: $i-eb;
+}
+.i-l {
+  font-family: $i-l;
 }
 .sf-black {
   font-family: $sf-black;

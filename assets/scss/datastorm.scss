@@ -5,6 +5,40 @@
     background-color: #f0f0f0;
   }
   #header {
+    .inner-header {
+      nav {
+        a {
+          .black-logo {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    &:not(.common-header) {
+      .inner-header {
+        nav {
+          a {
+            .white-logo {
+              display: none;
+            }
+            .black-logo {
+              display: block !important;
+            }
+          }
+          .collapse {
+            .navbar-nav {
+              .nav-item {
+                .nav-link {
+                  color: #000 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     padding-top: 0px;
     .navbar {
       max-width: 1240px;
@@ -14,6 +48,8 @@
         font-size: 30px;
         line-height: 30px;
         padding: 0px;
+        width: 100%;
+        max-width: 306px;
       }
       .collapse {
         .navbar-nav {
@@ -35,6 +71,19 @@
   }
 
   .home-banner {
+    &.banner-new {
+      .banner-content {
+        p {
+          font-size: 27px;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          margin-top: 44px;
+          display: inline-block;
+        }
+      }
+    }
     max-width: 1920px;
     margin: 0px auto;
     height: 500px;
@@ -125,6 +174,7 @@
       }
     }
   }
+
   .form-section {
     background-color: #f0f0f0;
     padding-top: 163px;
@@ -368,6 +418,256 @@
   .container {
     max-width: 1240px;
   }
+  .section-2 {
+    background-color: #f0f0f0;
+    padding-top: 163px;
+    padding-bottom: 135px;
+    .production-history {
+      .production-left-part {
+        width: 44.5%;
+        padding-top: 126px;
+        padding-right: 50px;
+        h2 {
+          font-size: 68px;
+          font-family: $i-eb;
+          color: #292929;
+        }
+        p {
+          font-size: 25px;
+          color: #a2a2a2;
+          font-family: $i-m;
+          padding-top: 10px;
+        }
+        .explore-btn {
+          font-size: 29px;
+          color: #292929;
+          font-family: $i-m;
+          text-decoration: none;
+          margin-top: 19px;
+          display: block;
+        }
+      }
+      .production-right-part {
+        width: 55.5%;
+        .w-100 {
+          .first-grid {
+            width: 49.7%;
+            .gal-img {
+              margin: 15px 0px;
+            }
+          }
+          .second-grid {
+            width: 45%;
+            .gal-img {
+              margin: 15px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .what-exactly {
+    padding: 145px 0px;
+    background-color: #f0f0f0;
+    .row {
+      .parallax-content {
+        h2 {
+          font-size: 65px;
+          line-height: 79px;
+          color: #292929;
+          padding-bottom: 9px;
+        }
+        p {
+          font-size: 25px;
+          color: #a2a2a2;
+          font-family: $i-m;
+          padding: 0px 0px 49px 0px;
+          margin: 0;
+          line-height: 39px;
+        }
+      }
+    }
+    .row {
+      .product-history-2 {
+        .swiper-wrapper {
+          margin-bottom: 70px;
+          .swiper-slide {
+            .product-card {
+              position: relative;
+              box-shadow: 5px 5px 14px #0000001a;
+              overflow: hidden;
+              .bg-overlay {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 9;
+              }
+
+              .product-card-body {
+                .product-image {
+                  filter: blur(4px);
+                  -webkit-filter: blur(4px);
+                }
+                .cellular-tower-maintenance {
+                  position: absolute;
+                  top: 50%;
+                  z-index: 999;
+                  color: #fff;
+                  font-size: 32px;
+                  font-family: "SF-SB";
+                  transform: translate(0%, -50%);
+                  left: 34px;
+                }
+                span {
+                  position: absolute;
+                  bottom: 77px;
+                  font-size: 20px;
+                  font-family: "SF-L";
+                  color: #fff;
+                  transform: rotate(-90deg);
+                  left: -30px;
+                }
+              }
+            }
+          }
+        }
+        .swiper-scrollbar.scroll-bar {
+          opacity: 1 !important;
+          height: 4px;
+          .swiper-scrollbar-drag {
+            background: #707070;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-us-outer {
+    padding-bottom: 65px;
+    .container {
+      max-width: 1240px;
+      .contact-content {
+        padding-top: 323px;
+        .row {
+          .col {
+            .contact-us-left-part {
+              max-width: 627px;
+              h1 {
+                font-size: 90px;
+                font-family: $i-l;
+                line-height: 120px;
+                color: #000;
+                margin: 0px;
+              }
+              .divider {
+                width: 66px;
+                height: 9px;
+                background-color: #000;
+                margin-top: 26px;
+              }
+              .contact-description {
+                max-width: 530px;
+                p {
+                  font-size: 19px;
+                  color: #818181;
+                  font-family: $sf-m;
+                  margin: 0;
+                  padding-top: 41px;
+                }
+              }
+              .contact-via {
+                margin-top: 79px;
+                p {
+                  color: #000;
+                  font-family: $i-m;
+                  font-size: 17px;
+                  margin: 0;
+                  line-height: 20px;
+                  padding-bottom: 14px;
+                  a {
+                    color: #000;
+                    text-decoration: none;
+                  }
+                }
+                p:last-child {
+                  padding-bottom: 0px;
+                }
+              }
+              .timing {
+                max-width: 530px;
+                margin-top: 160px;
+                strong {
+                  font-size: 17px;
+                  font-family: $i-b;
+                  line-height: 20px;
+                  text-transform: uppercase;
+                }
+                p {
+                  color: #969696;
+                  font-size: 17px;
+                  font-family: $i-m;
+                  line-height: 20px;
+                  margin: 0px;
+                  padding-top: 7px;
+                }
+              }
+            }
+            .contact-us-right-part {
+              max-width: 615px;
+              float: right;
+              .stages {
+                .form-details {
+                  .default-stage {
+                    p {
+                      font-size: 35px;
+                      line-height: 42px;
+                      color: #000;
+                      font-family: $i-l;
+                      display: inline-flex;
+                      label {
+                        width: max-content;
+                      }
+                      input {
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                        border-bottom: 2px solid #000;
+                        background-color: transparent;
+                      }
+                    }
+                    .interested {
+                      all: unset;
+                      padding-right: 15px;
+                      border-bottom: 1px solid;
+                      background: url("https://www.charbase.com/images/glyph/9662")
+                        no-repeat right;
+                      background-size: 16px;
+                    }
+                  }
+                }
+              }
+              .stage-3 {
+                text-align: right;
+                margin-top: 250px;
+                strong {
+                  color: #000;
+                  font-family: $i-m;
+                  font-size: 35px;
+                }
+                p {
+                  font-size: 30px;
+                  font-family: $i-l;
+                  color: #969696;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 576px) {
 }
@@ -405,6 +705,22 @@
   .navbar {
     max-width: 1510px !important;
   }
+  .contact-us-outer {
+    .container {
+      max-width: 1510px;
+      .contact-content {
+        .row {
+          .col {
+            .contact-us-left-part {
+              h1 {
+                font-size: 99px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 1920px) {
   .home-banner {
@@ -412,6 +728,15 @@
     height: 1079px;
     .container {
       max-width: 1510px;
+    }
+  }
+  .section-2 {
+    .production-history {
+      .production-left-part {
+        h2 {
+          font-size: 92px;
+        }
+      }
     }
   }
   .production-history {
