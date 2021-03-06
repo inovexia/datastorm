@@ -16805,7 +16805,7 @@ button.swiper-pagination-bullet {
   .form-section .area-check-form form .one-fourth .form-group label {
     color: #969696;
     font-size: 15px;
-    font-family: "SF-M";
+    font-family: 'SF-M';
     padding: 0px;
     margin: 0px;
   }
@@ -16819,7 +16819,7 @@ button.swiper-pagination-bullet {
     font-size: 20px;
     padding: 5px 0px;
     color: #2c2c2c;
-    font-family: "SF-B";
+    font-family: 'SF-B';
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -16831,7 +16831,7 @@ button.swiper-pagination-bullet {
   }
   .form-section .area-check-form form .one-fourth .form-group #province option {
     padding: 0px;
-    font-family: "SF-B";
+    font-family: 'SF-B';
   }
   .form-section .area-check-form form .one-fourth .check-btn {
     padding: 20px 58px;
@@ -16853,13 +16853,13 @@ button.swiper-pagination-bullet {
   .form-section .production-history .production-left-part p {
     font-size: 23px;
     color: #a2a2a2;
-    font-family: "SF-M";
+    font-family: 'SF-M';
     padding-top: 54px;
   }
   .form-section .production-history .production-left-part .explore-btn {
     font-size: 29px;
     color: #292929;
-    font-family: "SF-SB";
+    font-family: 'SF-SB';
     text-decoration: none;
     margin-top: 100px;
     display: block;
@@ -16933,7 +16933,7 @@ button.swiper-pagination-bullet {
     z-index: 999;
     color: #fff;
     font-size: 32px;
-    font-family: "SF-SB";
+    font-family: 'SF-SB';
     -webkit-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
     left: 34px;
@@ -16942,7 +16942,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     bottom: 77px;
     font-size: 20px;
-    font-family: "SF-L";
+    font-family: 'SF-L';
     color: #fff;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -17092,7 +17092,7 @@ button.swiper-pagination-bullet {
     z-index: 999;
     color: #fff;
     font-size: 32px;
-    font-family: "SF-SB";
+    font-family: 'SF-SB';
     -webkit-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
     left: 34px;
@@ -17101,7 +17101,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     bottom: 77px;
     font-size: 20px;
-    font-family: "SF-L";
+    font-family: 'SF-L';
     color: #fff;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -17187,9 +17187,8 @@ button.swiper-pagination-bullet {
   }
   .contact-us-outer .container .contact-content .row .col .contact-us-right-part {
     max-width: 615px;
-    float: right;
   }
-  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .default-stage p {
+  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .field {
     font-size: 35px;
     line-height: 42px;
     color: #000;
@@ -17198,22 +17197,22 @@ button.swiper-pagination-bullet {
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
-  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .default-stage p label {
+  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .field label {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
-  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .default-stage p input {
+  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .field input {
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 2px solid #000;
     background-color: transparent;
   }
-  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .default-stage .interested {
+  .contact-us-outer .container .contact-content .row .col .contact-us-right-part .stages .form-details .interested {
     all: unset;
     padding-right: 15px;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
     background: url("https://www.charbase.com/images/glyph/9662") no-repeat right;
     background-size: 16px;
   }

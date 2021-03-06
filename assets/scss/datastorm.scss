@@ -1,4 +1,4 @@
-@import "global";
+@import 'global';
 
 @media (min-width: 0) {
   body {
@@ -195,7 +195,7 @@
             label {
               color: #969696;
               font-size: 15px;
-              font-family: "SF-M";
+              font-family: 'SF-M';
               padding: 0px;
               margin: 0px;
             }
@@ -209,18 +209,18 @@
               font-size: 20px;
               padding: 5px 0px;
               color: #2c2c2c;
-              font-family: "SF-B";
+              font-family: 'SF-B';
               -webkit-appearance: none;
               -moz-appearance: none;
               -o-appearance: none;
               appearance: none;
-              background-image: url("../img/down-arrow.png");
+              background-image: url('../img/down-arrow.png');
               background-position: 100% center;
               background-repeat: no-repeat;
               outline: none !important;
               option {
                 padding: 0px;
-                font-family: "SF-B";
+                font-family: 'SF-B';
               }
             }
           }
@@ -247,13 +247,13 @@
         p {
           font-size: 23px;
           color: #a2a2a2;
-          font-family: "SF-M";
+          font-family: 'SF-M';
           padding-top: 54px;
         }
         .explore-btn {
           font-size: 29px;
           color: #292929;
-          font-family: "SF-SB";
+          font-family: 'SF-SB';
           text-decoration: none;
           margin-top: 100px;
           display: block;
@@ -339,7 +339,7 @@
                   z-index: 999;
                   color: #fff;
                   font-size: 32px;
-                  font-family: "SF-SB";
+                  font-family: 'SF-SB';
                   transform: translate(0%, -50%);
                   left: 34px;
                 }
@@ -347,7 +347,7 @@
                   position: absolute;
                   bottom: 77px;
                   font-size: 20px;
-                  font-family: "SF-L";
+                  font-family: 'SF-L';
                   color: #fff;
                   transform: rotate(-90deg);
                   left: -30px;
@@ -516,7 +516,7 @@
                   z-index: 999;
                   color: #fff;
                   font-size: 32px;
-                  font-family: "SF-SB";
+                  font-family: 'SF-SB';
                   transform: translate(0%, -50%);
                   left: 34px;
                 }
@@ -524,7 +524,7 @@
                   position: absolute;
                   bottom: 77px;
                   font-size: 20px;
-                  font-family: "SF-L";
+                  font-family: 'SF-L';
                   color: #fff;
                   transform: rotate(-90deg);
                   left: -30px;
@@ -616,35 +616,32 @@
             }
             .contact-us-right-part {
               max-width: 615px;
-              float: right;
               .stages {
                 .form-details {
-                  .default-stage {
-                    p {
-                      font-size: 35px;
-                      line-height: 42px;
-                      color: #000;
-                      font-family: $i-l;
-                      display: inline-flex;
-                      label {
-                        width: max-content;
-                      }
-                      input {
-                        border-top: 0;
-                        border-left: 0;
-                        border-right: 0;
-                        border-bottom: 2px solid #000;
-                        background-color: transparent;
-                      }
+                  .field {
+                    font-size: 35px;
+                    line-height: 42px;
+                    color: #000;
+                    font-family: $i-l;
+                    display: inline-flex;
+                    label {
+                      width: max-content;
                     }
-                    .interested {
-                      all: unset;
-                      padding-right: 15px;
-                      border-bottom: 1px solid;
-                      background: url("https://www.charbase.com/images/glyph/9662")
-                        no-repeat right;
-                      background-size: 16px;
+                    input {
+                      border-top: 0;
+                      border-left: 0;
+                      border-right: 0;
+                      border-bottom: 2px solid #000;
+                      background-color: transparent;
                     }
+                  }
+                  .interested {
+                    all: unset;
+                    padding-right: 15px;
+                    border-bottom: 2px solid;
+                    background: url('https://www.charbase.com/images/glyph/9662')
+                      no-repeat right;
+                    background-size: 16px;
                   }
                 }
               }
