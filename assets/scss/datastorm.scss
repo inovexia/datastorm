@@ -1,8 +1,16 @@
 @import "global";
 
 @media (min-width: 0) {
+  .common-animate {
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+    opacity: 0;
+  }
+  .snap-scroll-visible.common-animate {
+    opacity: 1;
+  }
   body {
-    background-color: #f0f0f0;
+    overflow-x: hidden;
   }
   #header {
     .inner-header {
@@ -71,6 +79,7 @@
   }
 
   .home-banner {
+    background-color: gray;
     &.banner-new {
       .banner-content {
         p {
@@ -543,124 +552,250 @@
       }
     }
   }
-
-  .contact-us-outer {
-    padding-bottom: 65px;
-    .container {
-      max-width: 1240px;
-      .contact-content {
-        padding-top: 323px;
-        .row {
-          .col {
-            .contact-us-left-part {
-              max-width: 627px;
-              h1 {
-                font-size: 90px;
-                font-family: $i-l;
-                line-height: 120px;
-                color: #000;
-                margin: 0px;
-              }
-              .divider {
-                width: 66px;
-                height: 9px;
-                background-color: #000;
-                margin-top: 26px;
-              }
-              .contact-description {
-                max-width: 530px;
-                p {
-                  font-size: 19px;
-                  color: #818181;
-                  font-family: $sf-m;
-                  margin: 0;
-                  padding-top: 41px;
-                }
-              }
-              .contact-via {
-                margin-top: 79px;
-                p {
-                  color: #000;
-                  font-family: $i-m;
-                  font-size: 17px;
-                  margin: 0;
-                  line-height: 20px;
-                  padding-bottom: 14px;
-                  a {
-                    color: #000;
-                    text-decoration: none;
-                  }
-                }
-                p:last-child {
-                  padding-bottom: 0px;
-                }
-              }
-              .timing {
-                max-width: 530px;
-                margin-top: 160px;
-                strong {
-                  font-size: 17px;
-                  font-family: $i-b;
-                  line-height: 20px;
-                  text-transform: uppercase;
-                }
-                p {
-                  color: #969696;
-                  font-size: 17px;
-                  font-family: $i-m;
-                  line-height: 20px;
-                  margin: 0px;
-                  padding-top: 7px;
-                }
-              }
-            }
-            .contact-us-right-part {
-              max-width: 615px;
-              float: right;
-              .stages {
-                .form-details {
-                  .default-stage {
-                    p {
-                      font-size: 35px;
-                      line-height: 42px;
-                      color: #000;
-                      font-family: $i-l;
-                      display: inline-flex;
-                      label {
-                        width: max-content;
-                      }
-                      input {
-                        border-top: 0;
-                        border-left: 0;
-                        border-right: 0;
-                        border-bottom: 2px solid #000;
-                        background-color: transparent;
-                      }
-                    }
-                    .interested {
-                      all: unset;
-                      padding-right: 15px;
-                      border-bottom: 1px solid;
-                      background: url("https://www.charbase.com/images/glyph/9662")
-                        no-repeat right;
-                      background-size: 16px;
-                      width: max-content;
-                    }
-                  }
-                }
-              }
-              .stage-3 {
-                text-align: right;
-                margin-top: 250px;
-                strong {
-                  color: #000;
-                  font-family: $i-m;
-                  font-size: 35px;
-                }
-                p {
-                  font-size: 30px;
+  .contact-us-main {
+    .contact-us-outer {
+      .h-line {
+        width: 1px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: #0000000d;
+      }
+      .h-line1 {
+        left: 10%;
+      }
+      .h-line2 {
+        left: 26%;
+      }
+      .h-line3 {
+        left: 42%;
+      }
+      .h-line4 {
+        right: 42%;
+      }
+      .h-line5 {
+        right: 26%;
+      }
+      .h-line6 {
+        right: 10%;
+      }
+      padding-bottom: 65px;
+      .container {
+        max-width: 1240px;
+        .contact-content {
+          padding-top: 323px;
+          .row {
+            .col {
+              .contact-us-left-part {
+                max-width: 627px;
+                h1 {
+                  font-size: 90px;
                   font-family: $i-l;
-                  color: #969696;
+                  line-height: 120px;
+                  color: #000;
+                  margin: 0px;
+                }
+                .divider {
+                  width: 66px;
+                  height: 9px;
+                  background-color: #000;
+                  margin-top: 26px;
+                }
+                .contact-description {
+                  max-width: 530px;
+                  p {
+                    font-size: 19px;
+                    color: #818181;
+                    font-family: $sf-m;
+                    margin: 0;
+                    padding-top: 41px;
+                  }
+                }
+                .contact-via {
+                  margin-top: 79px;
+                  p {
+                    color: #000;
+                    font-family: $i-m;
+                    font-size: 17px;
+                    margin: 0;
+                    line-height: 20px;
+                    padding-bottom: 14px;
+                    a {
+                      color: #000;
+                      text-decoration: none;
+                    }
+                  }
+                  p:last-child {
+                    padding-bottom: 0px;
+                  }
+                }
+                .timing {
+                  max-width: 530px;
+                  margin-top: 160px;
+                  strong {
+                    font-size: 17px;
+                    font-family: $i-b;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                  }
+                  p {
+                    color: #969696;
+                    font-size: 17px;
+                    font-family: $i-m;
+                    line-height: 20px;
+                    margin: 0px;
+                    padding-top: 7px;
+                  }
+                }
+              }
+              .contact-us-right-part-new {
+                width: 100%;
+                max-width: 615px;
+                float: right;
+                .stages {
+                  .form-details {
+                    transition: all 0.3s;
+                    &.v-hidden {
+                      visibility: hidden !important;
+                    }
+                    .default-stage {
+                      width: 100%;
+                      .field {
+                        margin-bottom: 40px;
+                        label {
+                          font-size: 35px;
+                          font-family: $i-l;
+                          margin: 0;
+                        }
+                        input {
+                          background: transparent;
+                          border-top: 0;
+                          border-left: 0;
+                          border-right: 0;
+                          border-bottom: 2px solid #000;
+                          font-family: "I-L";
+                          font-size: 20px;
+                          height: 25px;
+                          margin-top: 15px;
+                          padding-left: 5px;
+                          &:focus-visible {
+                            border-top: 0;
+                            border-left: 0;
+                            border-right: 0;
+                            outline: none;
+                          }
+                        }
+                        .interested {
+                          -webkit-appearance: none;
+                          -moz-appearance: none;
+                          appearance: none;
+                          padding: 2px 2px 2px 2px;
+                          border: none;
+                          background: url("../img/down-arrow.png") no-repeat
+                            right;
+                          border-bottom: 2px solid #000;
+                          height: 35px;
+                          margin-top: 5px;
+                          font-size: 20px;
+                          &:focus-visible {
+                            border-top: 0;
+                            border-left: 0;
+                            border-right: 0;
+                            outline: none;
+                          }
+                        }
+
+                        span {
+                          color: #000;
+                          font-family: $i-l;
+                          margin-top: -8px;
+                          padding-left: 3px;
+                          font-size: 40px;
+                        }
+                      }
+                    }
+                    .stage-2 {
+                      width: 100%;
+                      .field {
+                        margin-bottom: 40px;
+                        label {
+                          font-size: 35px;
+                          font-family: $i-l;
+                          margin: 0;
+                        }
+                        input {
+                          background: transparent;
+                          border-top: 0;
+                          border-left: 0;
+                          border-right: 0;
+                          border-bottom: 2px solid #000;
+                          font-family: "I-L";
+                          font-size: 20px;
+                          height: 25px;
+                          margin-top: 15px;
+                          padding-left: 5px;
+                          &:focus-visible {
+                            border-top: 0;
+                            border-left: 0;
+                            border-right: 0;
+                            outline: none;
+                          }
+                        }
+                        select {
+                          background: transparent;
+                          border-top: 0;
+                          border-left: 0;
+                          border-right: 0;
+                          border-bottom: 2px solid #000;
+                          font-family: "I-L";
+                          font-size: 20px;
+                          height: 25px;
+                          margin-top: 15px;
+                          padding-left: 5px;
+                        }
+                        span {
+                          color: #000;
+                          font-family: $i-l;
+                          margin-top: -8px;
+                          padding-left: 3px;
+                          font-size: 40px;
+                        }
+                      }
+                    }
+                    .process {
+                      margin-top: 40px;
+                      .continue {
+                        color: #000;
+                        font-size: 35px;
+                        font-family: $i-l;
+                        text-decoration: underline;
+                        cursor: pointer;
+                      }
+                      .form-submit {
+                        color: #000;
+                        font-size: 35px;
+                        font-family: $i-l;
+                        border: none;
+                        background-color: transparent;
+                        text-decoration: underline;
+                        outline: none;
+                      }
+                    }
+                  }
+                  .stage-3 {
+                    width: 100%;
+                    text-align: right;
+                    strong {
+                      font-size: 35px;
+                      color: #000;
+                      font-family: $i-m;
+                    }
+                    p {
+                      font-family: $i-l;
+                      font-size: 30px;
+                      color: #969696;
+                    }
+                  }
                 }
               }
             }
@@ -708,7 +843,7 @@
   }
   .contact-us-outer {
     .container {
-      max-width: 1510px;
+      max-width: 1510px !important;
       .contact-content {
         .row {
           .col {

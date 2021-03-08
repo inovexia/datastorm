@@ -14,7 +14,7 @@
       style="z-index: 9"
     ></div>
     <main class="">
-      <section class="position-relative">
+      <section class="contact-us-main position-relative">
         <div class="contact-us-outer">
           <div class="container">
             <div class="contact-content">
@@ -60,89 +60,113 @@
                   </div>
                 </div>
                 <div class="col col-12 col-md-6">
-                  <div class="contact-us-right-part">
-                    <div class="stages">
-                      <form
-                        method="post"
-                        class="form-details position-relative"
-                      >
-                        <div class="default-stage">
-                          <p>
-                            <label>My name is</label
-                            ><input
-                              type="text"
-                              name="my-name"
-                              class="my-name"
-                            />
-                          </p>
-                          <p>
-                            <label>my company is</label
-                            ><input
-                              type="text"
-                              name="my-company"
-                              class="my-company"
-                            />
-                          </p>
-                          <p>
-                            <label>I am interested in</label
-                            ><select class="interested">
-                              <option></option>
-                              <option>Option 1</option>
-                              <option>Option 2</option>
-                              <option>Option 3</option>
-                            </select>
-                          </p>
+                  <div class="d-flex justify-content-end">
+                    <div class="contact-us-right-part-new">
+                      <div class="stages">
+                        <form
+                          method="post"
+                          class="form-details d-flex flex-column align-items-end"
+                        >
+                          <div class="default-stage">
+                            <div class="field d-flex">
+                              <label class="flex-shrink-1">My name is</label>
+                              <input
+                                type="text"
+                                name="my-name"
+                                class="my-name flex-grow-1"
+                              /><span>,</span>
+                            </div>
+                            <div class="field d-flex">
+                              <label class="flex-shrink-1">my company is</label>
+                              <input
+                                type="text"
+                                name="my-company"
+                                class="my-company flex-grow-1"
+                              />
+                            </div>
+                            <div class="field d-flex">
+                              <label for="interested" class="flex-shrink-1"
+                                >I am interested in</label
+                              >
+                              <select
+                                id="interested"
+                                name="interested"
+                                class="interested flex-grow-1"
+                              >
+                                <option value=""></option>
+                                <option value="option-1">Option 1</option>
+                                <option value="option-2">Option 2</option>
+                                <option value="option-3">Option 3</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="stage-2" style="display: none">
+                            <div class="field d-flex">
+                              <label class="flex-shrink-1"
+                                >You can call me at</label
+                              >
+                              <input
+                                type="text"
+                                name="call-me-at"
+                                class="my-name flex-grow-1"
+                              />
+                              <span>,</span>
+                            </div>
+                            <div class="field d-flex">
+                              <label class="flex-shrink-1">my email is</label>
+                              <input
+                                type="text"
+                                name="my-email"
+                                class="my-company flex-grow-1"
+                              />
+                            </div>
+                            <div class="field d-flex">
+                              <label class="flex-shrink-1"
+                                >I need you to know</label
+                              >
+                              <input
+                                type="text"
+                                name="know-1"
+                                class="flex-grow-1"
+                              />
+                            </div>
+                            <div class="field d-flex">
+                              <input
+                                type="text"
+                                name="know-2"
+                                class="flex-grow-1"
+                              />
+                            </div>
+                          </div>
+                          <div class="process">
+                            <span class="continue">Continue</span>
+                            <button
+                              type="submit"
+                              name="submit"
+                              class="form-submit"
+                              style="display: none"
+                            >
+                              Submit
+                            </button>
+                          </div>
+                        </form>
+                        <div class="stage-3" style="display: none">
+                          <strong>Thanks for reaching out</strong>
+                          <p>We usually respond within 15 hours</p>
                         </div>
-                        <div class="stage-2" style="display: none">
-                          <p>
-                            <label>My name is</label
-                            ><input
-                              type="text"
-                              name="my-name"
-                              class="my-name"
-                            />
-                          </p>
-                          <p>
-                            <label>my company is</label
-                            ><input
-                              type="text"
-                              name="my-company"
-                              class="my-company"
-                            />
-                          </p>
-                          <p>
-                            <label>I am interested in</label
-                            ><select class="interested">
-                              <option></option>
-                              <option>Option 1</option>
-                              <option>Option 2</option>
-                              <option>Option 3</option>
-                            </select>
-                          </p>
-                        </div>
-                        <div class="process">
-                          <span class="continue">Continue</span>
-                          <button
-                            type="submit"
-                            name="submit"
-                            class="form-submit"
-                            style="display: none"
-                          >
-                            Submit
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-
-                    <div class="stage-3">
-                      <strong>Thanks for reaching out</strong>
-                      <p>We usually respond within 15 hours</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <span class="h-line position-absolute h-100 h-line1"></span>
+          <span class="h-line position-absolute h-100 h-line2"></span>
+          <span class="h-line position-absolute h-100 h-line3"></span>
+          <span class="h-line position-absolute h-100 h-line4"></span>
+          <span class="h-line position-absolute h-100 h-line5"></span>
+          <span class="h-line position-absolute h-100 h-line6"></span>
         </div>
       </section>
     </main>

@@ -56,9 +56,42 @@
         },
       },
     });
-    $(".continue").click(function () {
-      $(".default-stage").fadeOut();
-      $(".stage-2").fadeIn();
+    $(".process .continue").click(function () {
+      $(".default-stage, .process .continue").fadeOut(function () {
+        $(".stage-2, .process .form-submit").fadeIn();
+      });
     });
+
+    $(".form-details").on("submit", function (event) {
+      event.preventDefault();
+      let dataString = $(this).serialize();
+      $.ajax({
+        type: "POST",
+        url: "form-to-email.php",
+        data: dataString,
+        success: function (data) {
+          $(".form-details")[0].reset();
+        },
+      }).done(function (data) {
+        $(".form-details").addClass("v-hidden");
+        setTimeout(function () {
+          $(".stage-3").fadeIn();
+        }, 500);
+      });
+    });
+    let snapScroll = $("header, section, footer").SnapScroll({
+      hashes: true,
+    });
+
+    //Listen for active element change
+    //You could listen globally like $(document)
+    // $("header").on(snapScroll.eventChangeActive, function (evt, newActive) {});
+
+    //Listen for visible element change
+    //You could listen on a specific element like $("header")
+    $(document).on(
+      snapScroll.eventChangeVisible,
+      function (evt, visibleList) {}
+    );
   });
 })(jQuery);
