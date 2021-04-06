@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="default-light-mode">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,49 +8,31 @@
     <link rel="stylesheet" href="./assets/css/datastorm.min.css" />
   </head>
   <body>
-    <div
-      id="header"
-      class="position-absolute w-100 common-header"
-      style="z-index: 9"
-    ></div>
-    <main class="">
+    <div id="header" class="w-100 common-header" style="z-index: 9"></div>
+    <main class="main">
       <section
         id="section1"
-        class="home-banner position-relative common-animate"
-        style="background-image: url('./assets/img/banner.jpg')"
+        class="home-banner position-relative common-animates"
       >
+        <img src="./assets/img/new-home-banner.jpg" alt="" class="img-fluid" />
         <div class="banner-inner">
-          <div class="container">
-            <div class="banner-content">
-              <h1 class="i-b text-white">
-                Cellular maintenance done right easy
-              </h1>
-              <p class="sf-l text-white">
-                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                Lorem ipsum Lorem ipsum
-              </p>
-              <a href="#" class="banner-btn sf-l">Explore</a>
-            </div>
-            <div class="banner-content-bottom">
-              <div class="row mx-0">
-                <div class="latest-project">
-                  <span class="d-block">LATEST PROJECT</span>
-                  <a href="#">Electrical Satellite Wiring</a>
-                </div>
-                <div class="recent-work">
-                  <span class="d-block">3 MARCH 2021</span>
-                  <a href="#"
-                    >View Recent Work
-                    <img
-                      src="./assets/img/arrow.png"
-                      alt=""
-                      width="84"
-                      height="11"
-                      style="padding-left: 15px"
-                  /></a>
-                </div>
+          <div class="container-fluid h-100">
+            <div class="d-flex h-100 align-items-center">
+              <div class="banner-content">
+                <h1 class="i-eb text-white">Welcome To Our Future.</h1>
+                <p class="i-m text-white">
+                  Cellular tower maintenance, installation and production done
+                  right, the first time.
+                </p>
+                <a href="#" class="sf-l"
+                  >Explore<img
+                    src="./assets/img/arrow.png"
+                    alt=""
+                    style="padding-left: 15px"
+                /></a>
               </div>
             </div>
+
             <div class="sticky-btn position-absolute">
               <span
                 >Scroll for more
@@ -63,305 +45,478 @@
               /></span>
             </div>
           </div>
-          <span class="h-line position-absolute h-100 h-line1"></span>
+          <!-- <span class="h-line position-absolute h-100 h-line1"></span>
           <span class="h-line position-absolute h-100 h-line2"></span>
           <span class="h-line position-absolute h-100 h-line3"></span>
           <span class="h-line position-absolute h-100 h-line4"></span>
           <span class="h-line position-absolute h-100 h-line5"></span>
-          <span class="h-line position-absolute h-100 h-line6"></span>
+          <span class="h-line position-absolute h-100 h-line6"></span> -->
         </div>
       </section>
       <section
         id="section2"
-        class="form-section d-inline-block w-100 common-animate"
+        class="form-section d-inline-block w-100 common-animates"
       >
-        <div class="container">
-          <div class="production-history d-block d-lg-flex">
-            <div class="production-left-part">
-              <h2 class="m-0">
-                How is the production history of your product?
-              </h2>
-              <p class="m-0 pr-0 pr-xl-5">
-                How is the production history of your product ry of you? history
-                of your product history of history of youchistory of history of
-                history.
-              </p>
-              <a href="#" class="explore-btn"
-                >Explore <i class="fa fa-long-arrow-down"></i
-              ></a>
-            </div>
-            <div class="production-right-part">
-              <div class="w-100 d-flex justify-content-between align-items-end">
-                <div class="text-right first-grid">
-                  <div class="gal-img d-inline-block">
-                    <img
-                      src="./assets/img/img-328x432.jpg"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="328"
-                      height="432"
-                    />
-                  </div>
-                  <div class="gal-img d-inline-block">
-                    <img
-                      src="./assets/img/img-402x238.jpg"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="402"
-                      height="238"
-                    />
+        <div class="container-fluid h-100">
+          <div class="area-check-form mx-auto">
+            <form action="" class="w-100">
+              <div class="row mx-0 justify-content-between">
+                <div class="one-fourth mb-3 mb-md-0">
+                  <div class="form-group mb-0">
+                    <label for="province">When</label>
+                    <select name="province" id="province" value="Province">
+                      <option value="Province" selected="selected">From</option>
+                      <option value="option 1">Option 1</option>
+                      <option value="option 2">Option 2</option>
+                      <option value="option 3">Option 3</option>
+                      <option value="option 4">Option 4</option>
+                    </select>
                   </div>
                 </div>
-                <div class="second-grid d-inline-block">
-                  <div class="gal-img">
-                    <img
-                      src="./assets/img/img-446x484.jpg"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="446"
-                      height="484"
-                    />
+                <div class="one-fourth mb-3 mb-md-0">
+                  <div class="form-group mb-0">
+                    <label for="province">When</label>
+                    <select name="province" id="province" value="Province">
+                      <option value="Province" selected="selected">From</option>
+                      <option value="option 1">Option 1</option>
+                      <option value="option 2">Option 2</option>
+                      <option value="option 3">Option 3</option>
+                      <option value="option 4">Option 4</option>
+                    </select>
                   </div>
+                </div>
+                <div class="one-fourth mb-3 mb-md-0">
+                  <div class="form-group mb-0">
+                    <label for="province">When</label>
+                    <select name="province" id="province" value="Province">
+                      <option value="Province" selected="selected">From</option>
+                      <option value="option 1">Option 1</option>
+                      <option value="option 2">Option 2</option>
+                      <option value="option 3">Option 3</option>
+                      <option value="option 4">Option 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="one-fourth mb-3 mb-md-0 text-left text-md-right">
+                  <input type="button" class="check-btn" value="CHECK" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="production-history">
+            <div class="row mx-0">
+              <div class="col col-12 col-md-6 px-3 px-md-0">
+                <div class="left-part">
+                  <h3>
+                    We believe in doing things right the first time and making
+                    the process as simple as possible.
+                  </h3>
+                  <p>
+                    How is the production history of your product ry of
+                    you?history of your product history of history of youc
+                  </p>
+                  <a href="#" class="sf-l"
+                    >SEE OUR WORK<img
+                      src="./assets/img/arrow-black.png"
+                      alt=""
+                      style="padding-left: 15px"
+                  /></a>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 px-3 px-md-0">
+                <div class="right-part text-left text-md-right">
+                  <img src="./assets/img/moon-final.png" alt="" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section
-        id="section3"
-        class="product-history-parallax common-animate"
-        style="
-          background-image: linear-gradient(
-              to bottom,
-              rgba(255, 255, 255, 0.8),
-              rgba(0, 0, 0, 0.3)
-            ),
-            url('./assets/img/img-1920x693.jpg');
-        "
-      >
-        <div class="container">
-          <div class="parallax-content">
-            <h2 class="m-0 sf-h">
-              How is the production history of your product?
-            </h2>
+      <section id="section3" class="our-services">
+        <div class="container-fluid h-100">
+          <div class="row mx-0 no-gutters">
+            <div class="col col-12 col-md-6">
+              <div class="section-title">
+                <h2>EXACTLY WHAT WE DO</h2>
+              </div>
+            </div>
+            <div class="col col-12 col-md-6">
+              <div class="section-cta w-100 text-right">
+                <a href="#" class=""
+                  >View All Services<img
+                    src="./assets/img/arrow-black.png"
+                    alt=""
+                    style="padding-left: 15px"
+                /></a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+          <div class="swiper service-slider swiper-container">
+            <div class="services swiper-wrapper">
+              <div class="service swiper-slide">
+                <div class="service-card-body position-relative">
+                  <div class="service-image">
+                    <img
+                      src="./assets/img/img-465x388-1.jpg"
+                      class="img-fluid"
+                      alt="Responsive image"
+                      width="465"
+                      height="388"
+                    />
+                  </div>
 
-      <section id="section4" class="product-history-section common-animate">
-        <div class="container">
-          <div class="row px-0 mx-0">
-            <div class="parallax-content">
-              <h2 class="m-0 sf-h">
-                How is the production history of your product?
-              </h2>
-            </div>
-          </div>
-          <div class="row justify-content-between">
-            <div class="product-history swiper swiper-container">
-              <div class="swiper-wrapper px-2">
-                <div class="swiper-slide mb-4 tower-maintenance">
-                  <div class="product-card">
-                    <div class="bg-overlay"></div>
-                    <div class="product-card-body">
-                      <div class="product-image">
-                        <img
-                          src="./assets/img/img-386x622-1.jpg"
-                          class="img-fluid"
-                          alt="Responsive image"
-                          width="386"
-                          height="622"
-                        />
-                      </div>
-                      <div class="cellular-tower-maintenance">
-                        Cellular Tower Maintenance
-                      </div>
-                      <span>MAINTENANCE</span>
-                    </div>
-                  </div>
+                  <span class="position-absolute">MAINTENANCE</span>
                 </div>
-                <div class="swiper-slide mb-4 tower-maintenance">
-                  <div class="product-card">
-                    <div class="bg-overlay"></div>
-                    <div class="product-card-body">
-                      <div class="product-image">
-                        <img
-                          src="./assets/img/img-386x622-2.jpg"
-                          class="img-fluid"
-                          alt="Responsive image"
-                          width="386"
-                          height="622"
-                        />
-                      </div>
-                      <div class="cellular-tower-maintenance">
-                        Cellular Tower Maintenance
-                      </div>
-                      <span>MAINTENANCE</span>
-                    </div>
-                  </div>
+                <div class="cellular-tower-maintenance">
+                  Cellular Tower Maintenance
                 </div>
-                <div class="swiper-slide mb-4 tower-maintenance">
-                  <div class="product-card">
-                    <div class="bg-overlay"></div>
-                    <div class="product-card-body">
-                      <div class="product-image">
-                        <img
-                          src="./assets/img/img-386x622-3.jpg"
-                          class="img-fluid"
-                          alt="Responsive image"
-                          width="386"
-                          height="622"
-                        />
-                      </div>
-                      <div class="cellular-tower-maintenance">
-                        Cellular Tower Maintenance
-                      </div>
-                      <span>MAINTENANCE</span>
-                    </div>
+              </div>
+              <div class="service swiper-slide">
+                <div class="service-card-body position-relative">
+                  <div class="service-image">
+                    <img
+                      src="./assets/img/img-465x388-2.jpg"
+                      class="img-fluid"
+                      alt="Responsive image"
+                      width="465"
+                      height="388"
+                    />
                   </div>
+
+                  <span class="position-absolute">MAINTENANCE</span>
                 </div>
-                <div class="swiper-slide mb-4 tower-maintenance">
-                  <div class="product-card">
-                    <div class="bg-overlay"></div>
-                    <div class="product-card-body">
-                      <div class="product-image">
-                        <img
-                          src="./assets/img/img-386x622-1.jpg"
-                          class="img-fluid"
-                          alt="Responsive image"
-                          width="386"
-                          height="622"
-                        />
-                      </div>
-                      <div class="cellular-tower-maintenance">
-                        Cellular Tower Maintenance
-                      </div>
-                      <span>MAINTENANCE</span>
-                    </div>
-                  </div>
+                <div class="cellular-tower-maintenance">
+                  Cellular Tower Maintenance
                 </div>
-                <div class="swiper-slide mb-4 tower-maintenance">
-                  <div class="product-card">
-                    <div class="bg-overlay"></div>
-                    <div class="product-card-body">
-                      <div class="product-image">
-                        <img
-                          src="./assets/img/img-386x622-2.jpg"
-                          class="img-fluid"
-                          alt="Responsive image"
-                          width="386"
-                          height="622"
-                        />
-                      </div>
-                      <div class="cellular-tower-maintenance">
-                        Cellular Tower Maintenance
-                      </div>
-                      <span>MAINTENANCE</span>
-                    </div>
+              </div>
+              <div class="service swiper-slide">
+                <div class="service-card-body position-relative">
+                  <div class="service-image">
+                    <img
+                      src="./assets/img/img-465x388-3.jpg"
+                      class="img-fluid"
+                      alt="Responsive image"
+                      width="465"
+                      height="388"
+                    />
                   </div>
+
+                  <span class="position-absolute">MAINTENANCE</span>
+                </div>
+                <div class="cellular-tower-maintenance">
+                  Cellular Tower Maintenance
+                </div>
+              </div>
+              <div class="service swiper-slide">
+                <div class="service-card-body position-relative">
+                  <div class="service-image">
+                    <img
+                      src="./assets/img/img-465x388-1.jpg"
+                      class="img-fluid"
+                      alt="Responsive image"
+                      width="465"
+                      height="388"
+                    />
+                  </div>
+
+                  <span class="position-absolute">MAINTENANCE</span>
+                </div>
+                <div class="cellular-tower-maintenance">
+                  Cellular Tower Maintenance
+                </div>
+              </div>
+              <div class="service swiper-slide">
+                <div class="service-card-body position-relative">
+                  <div class="service-image">
+                    <img
+                      src="./assets/img/img-465x388-2.jpg"
+                      class="img-fluid"
+                      alt="Responsive image"
+                      width="465"
+                      height="388"
+                    />
+                  </div>
+
+                  <span class="position-absolute">MAINTENANCE</span>
+                </div>
+                <div class="cellular-tower-maintenance">
+                  Cellular Tower Maintenance
                 </div>
               </div>
             </div>
+            <div class="swiper-scrollbar service-slider-scroller"></div>
           </div>
         </div>
       </section>
-      <section id="section5" class="trusted-parteners common-animate">
-        <div class="container">
+      <section id="section4" class="datastorm-help">
+        <div class="container-fluid h-100">
           <div class="row mx-0">
-            <div class="trusted-partener-left">
-              <div class="content-area">
-                <h2>Trusted partners worldwide</h2>
+            <div class="col col-12 col-md-6">
+              <div class="left-part">
+                <h3>
+                  DATASTORM HELPS
+                  <img
+                    src="./assets/img/moon-text.png"
+                    class="img-fluid"
+                    alt="Responsive image"
+                  />
+                  COMPANIES GET BACK
+                </h3>
                 <p>
-                  We’re partners with countless major organisations around the
-                  globe
+                  How is the production history of your product ry of you?
+                  history of your product history of history
                 </p>
+                <a href="#" class=""
+                  >Explore<img
+                    src="./assets/img/arrow-black.png"
+                    alt=""
+                    style="padding-left: 15px"
+                /></a>
               </div>
             </div>
-            <div class="trusted-partener-right">
-              <div class="row mx-0">
-                <div class="col-4">
-                  <div class="partener-logo">
-                    <img
-                      src="./assets/img/p-logo1.png"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="204"
-                      height="90"
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="partener-logo">
-                    <img
-                      src="./assets/img/p-logo2.png"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="204"
-                      height="90"
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="partener-logo">
-                    <img
-                      src="./assets/img/p-logo3.png"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="204"
-                      height="90"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-0">
-                <div class="col-4">
-                  <div class="partener-logo">
-                    <img
-                      src="./assets/img/p-logo4.png"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="204"
-                      height="90"
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="partener-logo">
-                    <img
-                      src="./assets/img/p-logo5.png"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="204"
-                      height="90"
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="partener-logo">
-                    <img
-                      src="./assets/img/p-logo6.png"
-                      class="img-fluid"
-                      alt="Responsive image"
-                      width="204"
-                      height="90"
-                    />
-                  </div>
-                </div>
+            <div class="col col-12 col-md-6">
+              <div class="right-part">
+                <img
+                  src="./assets/img/img-821x1133.jpg"
+                  alt=""
+                  width="100%"
+                  height=""
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="section6" class="dream-furniture common-animate">
-        <div class="container">
-          <div class="dream-furniture-content">
-            <div class="content-area">
-              <h3>
-                <span>COL dream furniture</span> exists to make carbon fiber 3D
-                accessible to all engineers, designers, and manufacturers.
-              </h3>
+      <section id="section5" class="our-past-projects">
+        <div class="our-projects-entry">
+          <div class="container-fluid h-100">
+            <div class="row section-entry mx-0 no-gutters">
+              <div class="col col-12 col-md-6">
+                <div class="section-title">
+                  <h2>OUR PAST PROJECTS</h2>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6">
+                <div class="section-cta w-100 text-right">
+                  <a href="#" class=""
+                    >View All Services<img
+                      src="./assets/img/arrow-black.png"
+                      alt=""
+                      style="padding-left: 15px"
+                  /></a>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="container-fluid h-100">
+          <div class="row no-gutters past-projects-list">
+            <div class="col col-12 col-md-5">
+              <div class="past-projects-image">
+                <a href="#">
+                  <img
+                    src="./assets/img/img-585x348-1.jpg"
+                    alt=""
+                    width="100%"
+                    height=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col col-12 col-md-7">
+              <div class="past-projects-content pl-0 pl-md-3 position-relative">
+                <a class="project-title mt-3 mt-md-0" href="#"
+                  >CELLULAR TOWER LIGHT BULB REPLACEMENT + PAINT</a
+                >
+                <p class="project-meta">GRAND PRAIRIE, AB | 11.18.20</p>
+                <span class="next-arrow position-absolute"
+                  ><a href=""
+                    ><img
+                      src="./assets/img/small-next-arrow.png"
+                      alt=""
+                      width="37"
+                      height="34" /></a
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters past-projects-list">
+            <div class="col col-12 col-md-5">
+              <div class="past-projects-image">
+                <a href="#">
+                  <img
+                    src="./assets/img/img-585x348-2.jpg"
+                    alt=""
+                    width="100%"
+                    height=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col col-12 col-md-7">
+              <div class="past-projects-content pl-0 pl-md-3 position-relative">
+                <a class="project-title mt-3 mt-md-0" href="#"
+                  >CELLULAR TOWER LIGHT BULB REPLACEMENT + PAINT</a
+                >
+                <p class="project-meta">GRAND PRAIRIE, AB | 11.18.20</p>
+                <span class="next-arrow position-absolute"
+                  ><a href=""
+                    ><img
+                      src="./assets/img/small-next-arrow.png"
+                      alt=""
+                      width="37"
+                      height="34" /></a
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters past-projects-list">
+            <div class="col col-12 col-md-5">
+              <div class="past-projects-image">
+                <a href="#">
+                  <img
+                    src="./assets/img/img-585x348-3.jpg"
+                    alt=""
+                    width="100%"
+                    height=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col col-12 col-md-7">
+              <div class="past-projects-content pl-0 pl-md-3 position-relative">
+                <a class="project-title mt-3 mt-md-0" href="#"
+                  >CELLULAR TOWER LIGHT BULB REPLACEMENT + PAINT</a
+                >
+                <p class="project-meta">GRAND PRAIRIE, AB | 11.18.20</p>
+                <span class="next-arrow position-absolute"
+                  ><a href=""
+                    ><img
+                      src="./assets/img/small-next-arrow.png"
+                      alt=""
+                      width="37"
+                      height="34" /></a
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters past-projects-list">
+            <div class="col col-12 col-md-5">
+              <div class="past-projects-image">
+                <a href="#">
+                  <img
+                    src="./assets/img/img-585x348-4.jpg"
+                    alt=""
+                    width="100%"
+                    height=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col col-12 col-md-7">
+              <div class="past-projects-content pl-0 pl-md-3 position-relative">
+                <a class="project-title mt-3 mt-md-0" href="#"
+                  >CELLULAR TOWER LIGHT BULB REPLACEMENT + PAINT</a
+                >
+                <p class="project-meta">GRAND PRAIRIE, AB | 11.18.20</p>
+                <span class="next-arrow position-absolute"
+                  ><a href=""
+                    ><img
+                      src="./assets/img/small-next-arrow.png"
+                      alt=""
+                      width="37"
+                      height="34" /></a
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section6" class="partners">
+        <div class="container-fluid h-100">
+          <div class="row mx-0 no-gutters">
+            <div class="col col-12">
+              <div class="section-title">
+                <h2>TRUSTED PARTNERS GLOBAL</h2>
+              </div>
+            </div>
+          </div>
+          <div class="swiper swiper-container partners-list-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide partners-list">
+                <div class="partner-brand-logo">
+                  <img src="./assets/img/partner-logo.png" alt="" />
+                </div>
+                <div class="partner-title">MILANO CANADA</div>
+                <div class="partner-desc">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet
+                </div>
+              </div>
+              <div class="swiper-slide partners-list">
+                <div class="partner-brand-logo">
+                  <img src="./assets/img/partner-logo.png" alt="" />
+                </div>
+                <div class="partner-title">MILANO CANADA</div>
+                <div class="partner-desc">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet
+                </div>
+              </div>
+              <div class="swiper-slide partners-list">
+                <div class="partner-brand-logo">
+                  <img src="./assets/img/partner-logo.png" alt="" />
+                </div>
+                <div class="partner-title">MILANO CANADA</div>
+                <div class="partner-desc">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet
+                </div>
+              </div>
+              <div class="swiper-slide partners-list">
+                <div class="partner-brand-logo">
+                  <img src="./assets/img/partner-logo.png" alt="" />
+                </div>
+                <div class="partner-title">MILANO CANADA</div>
+                <div class="partner-desc">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet
+                </div>
+              </div>
+              <div class="swiper-slide partners-list">
+                <div class="partner-brand-logo">
+                  <img src="./assets/img/partner-logo.png" alt="" />
+                </div>
+                <div class="partner-title">MILANO CANADA</div>
+                <div class="partner-desc">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet
+                </div>
+              </div>
+              <div class="swiper-slide partners-list">
+                <div class="partner-brand-logo">
+                  <img src="./assets/img/partner-logo.png" alt="" />
+                </div>
+                <div class="partner-title">MILANO CANADA</div>
+                <div class="partner-desc">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar partners-slider-scroller"></div>
           </div>
         </div>
       </section>
@@ -372,7 +527,6 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/swiper-bundle.min.js"></script>
-    <script src="./assets/js/snap-scroll.js"></script>
     <script src="./assets/js/datastorm.js"></script>
   </body>
 </html>

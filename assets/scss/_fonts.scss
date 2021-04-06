@@ -68,6 +68,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: $i-sb;
+  src: url("../fonts/Inter-SBold/inter-semibold.woff2") format("woff2"),
+    url("../fonts/Inter-SBold/inter-semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .i-m {
   font-family: $i-m;
 }
@@ -76,6 +83,9 @@
 }
 .i-eb {
   font-family: $i-eb;
+}
+.i-sb {
+  font-family: $i-sb;
 }
 .i-l {
   font-family: $i-l;

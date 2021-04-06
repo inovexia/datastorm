@@ -16598,6 +16598,13 @@ button.swiper-pagination-bullet {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "I-SB";
+  src: url("../fonts/Inter-SBold/inter-semibold.woff2") format("woff2"), url("../fonts/Inter-SBold/inter-semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .i-m {
   font-family: "I-M";
 }
@@ -16608,6 +16615,10 @@ button.swiper-pagination-bullet {
 
 .i-eb {
   font-family: "I-EB";
+}
+
+.i-sb {
+  font-family: "I-SB";
 }
 
 .i-l {
@@ -16639,6 +16650,11 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 0) {
+  main {
+    width: 100%;
+    max-width: 1921px;
+    margin: 0px auto;
+  }
   .common-animate {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -16649,11 +16665,46 @@ button.swiper-pagination-bullet {
   .snap-scroll-visible.common-animate {
     opacity: 1;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     overflow-x: hidden;
+    background-color: #f0f0f0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  body.dark-mode {
+    background-color: #252422;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  body.dark-mode .our-services .cellular-tower-maintenance {
+    color: #f9cdcd !important;
+  }
+  body.dark-mode .our-services .container .service-slider .swiper-scrollbar {
+    background: #b1b1b1 !important;
+  }
+  body.dark-mode .our-services .container .service-slider .swiper-scrollbar .swiper-scrollbar-drag {
+    background: #f9cdcd !important;
+  }
+  #header.nav-down {
+    background-color: rgba(0, 0, 0, 0.4) !important;
   }
   #header {
+    position: fixed;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     padding-top: 0px;
+  }
+  #header .container-fluid, #header .container-sm, #header .container-md, #header .container-lg, #header .container-xl {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #header.nav-up {
+    top: -100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   #header .inner-header nav a .black-logo {
     display: none !important;
@@ -16663,6 +16714,9 @@ button.swiper-pagination-bullet {
   }
   #header:not(.common-header) .inner-header nav a .black-logo {
     display: block !important;
+  }
+  #header:not(.common-header) .inner-header nav .collapse .navbar-nav {
+    max-width: 656px;
   }
   #header:not(.common-header) .inner-header nav .collapse .navbar-nav .nav-item .nav-link {
     color: #000 !important;
@@ -16680,16 +16734,16 @@ button.swiper-pagination-bullet {
     max-width: 306px;
   }
   #header .navbar .collapse .navbar-nav {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    max-width: 656px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #header .navbar .collapse .navbar-nav li {
     margin-left: 0px;
     padding: 5px 0px;
   }
   #header .navbar .collapse .navbar-nav li a {
-    font-size: 25px;
+    font-size: 18px;
     color: #ffffff;
     font-family: "I-M";
     letter-spacing: 0.13px;
@@ -16697,12 +16751,18 @@ button.swiper-pagination-bullet {
   }
   .home-banner {
     background-color: gray;
+    z-index: 0;
+    min-height: 600px;
     max-width: 1920px;
     margin: 0px auto;
-    height: 500px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 75% center;
+  }
+  .home-banner .banner-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
   .home-banner.banner-new .banner-content p {
     font-size: 27px;
@@ -16739,31 +16799,25 @@ button.swiper-pagination-bullet {
     right: 10%;
   }
   .home-banner .banner-content {
-    position: absolute;
-    top: 320px;
-    max-width: 920px;
-    z-index: 9;
+    max-width: 650px;
   }
   .home-banner .banner-content h1 {
-    font-size: 88px;
+    font-size: 107px;
     margin: 0px;
-    line-height: 88px;
   }
   .home-banner .banner-content p {
-    max-width: 657px;
-    font-size: 23px;
+    max-width: 650px;
+    font-size: 27px;
     line-height: 32px;
     padding-top: 15px;
     margin: 0px;
   }
-  .home-banner .banner-content .banner-btn {
+  .home-banner .banner-content a {
+    color: #fff;
     font-size: 23px;
-    color: #151515;
-    padding: 10px 68px;
-    display: inline-block;
-    background-color: #fff;
-    margin-top: 35px;
     text-decoration: none;
+    margin-top: 44px;
+    display: inline-block;
   }
   .home-banner .banner-content-bottom {
     position: absolute;
@@ -16796,18 +16850,17 @@ button.swiper-pagination-bullet {
     color: #fff;
   }
   .form-section {
-    background-color: #f0f0f0;
-    padding-top: 163px;
-    padding-bottom: 220px;
+    padding-top: 0px;
+    padding-bottom: 100px;
   }
   .form-section .area-check-form {
-    max-width: 1441px;
-    margin-top: -70px;
+    width: 100%;
+    margin-top: -135px;
     -webkit-box-shadow: 7px 7px 35px #00000031;
             box-shadow: 7px 7px 35px #00000031;
     background-color: #fff;
     position: relative;
-    padding: 94px 45px 70px;
+    padding: 65px 124px;
   }
   .form-section .area-check-form form .one-fourth {
     width: 20%;
@@ -16845,11 +16898,51 @@ button.swiper-pagination-bullet {
     font-family: "SF-B";
   }
   .form-section .area-check-form form .one-fourth .check-btn {
-    padding: 20px 58px;
-    background: #404040;
-    color: #fff;
-    border: 1px solid #707070;
+    width: 100%;
+    max-width: 221px;
+    padding: 15px 58px;
+    background: transparent;
+    color: #000;
+    border: 3px solid #191919;
     font-size: 18px;
+    border-radius: 50px;
+  }
+  .form-section .area-check-form form .one-fourth .check-btn:focus-visible {
+    border: 3px solid #191919;
+    border-radius: 50px;
+    outline: none;
+  }
+  .form-section .production-history .row {
+    padding: 190px 0px 220px;
+    border-bottom: 1px solid #707070;
+  }
+  .form-section .production-history .row .col .left-part {
+    width: 100%;
+    max-width: 782px;
+    text-align: left;
+  }
+  .form-section .production-history .row .col .left-part h3 {
+    font-size: 41px;
+    color: #292929;
+    font-family: "I-SB";
+    line-height: 45px;
+    margin-bottom: 0px;
+  }
+  .form-section .production-history .row .col .left-part p {
+    font-size: 25px;
+    color: #a2a2a2;
+    font-family: "I-M";
+    line-height: 32px;
+    padding-top: 28px;
+    margin: 0;
+  }
+  .form-section .production-history .row .col .left-part a {
+    color: #292929;
+    font-size: 18px;
+    font-family: "I-SB";
+    margin-top: 28px;
+    display: block;
+    text-decoration: none;
   }
   .form-section .production-history .production-left-part {
     width: 44.5%;
@@ -16895,17 +16988,288 @@ button.swiper-pagination-bullet {
   .form-section .production-history .production-right-part .w-100 .second-grid .gal-img {
     margin: 15px 0px;
   }
+  .our-services {
+    padding: 100px 0px 0px;
+  }
+  .our-services .container-fluid .row, .our-services .container-sm .row, .our-services .container-md .row, .our-services .container-lg .row, .our-services .container-xl .row {
+    padding-bottom: 80px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  .our-services .container-fluid .row .col .section-title, .our-services .container-sm .row .col .section-title, .our-services .container-md .row .col .section-title, .our-services .container-lg .row .col .section-title, .our-services .container-xl .row .col .section-title {
+    width: 100%;
+    max-width: 315px;
+  }
+  .our-services .container-fluid .row .col .section-title h2, .our-services .container-sm .row .col .section-title h2, .our-services .container-md .row .col .section-title h2, .our-services .container-lg .row .col .section-title h2, .our-services .container-xl .row .col .section-title h2 {
+    font-size: 46px;
+    line-height: 50px;
+    color: #292929;
+    font-family: "I-B";
+    margin-bottom: 0;
+  }
+  .our-services .container-fluid .row .col .section-cta a, .our-services .container-sm .row .col .section-cta a, .our-services .container-md .row .col .section-cta a, .our-services .container-lg .row .col .section-cta a, .our-services .container-xl .row .col .section-cta a {
+    font-size: 25px;
+    font-family: "I-SB";
+    color: #000000;
+    text-decoration: none;
+  }
+  .our-services .container-fluid .service-slider .services, .our-services .container-sm .service-slider .services, .our-services .container-md .service-slider .services, .our-services .container-lg .service-slider .services, .our-services .container-xl .service-slider .services {
+    margin-bottom: 280px;
+  }
+  .our-services .container-fluid .service-slider .services .service .service-card-body span, .our-services .container-sm .service-slider .services .service .service-card-body span, .our-services .container-md .service-slider .services .service .service-card-body span, .our-services .container-lg .service-slider .services .service .service-card-body span, .our-services .container-xl .service-slider .services .service .service-card-body span {
+    font-size: 20px;
+    font-family: "I-L";
+    bottom: 81px;
+    left: -37px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    color: #fff;
+  }
+  .our-services .container-fluid .service-slider .services .service .cellular-tower-maintenance, .our-services .container-sm .service-slider .services .service .cellular-tower-maintenance, .our-services .container-md .service-slider .services .service .cellular-tower-maintenance, .our-services .container-lg .service-slider .services .service .cellular-tower-maintenance, .our-services .container-xl .service-slider .services .service .cellular-tower-maintenance {
+    font-size: 20px;
+    line-height: 20px;
+    color: #292929;
+    font-family: "I-B";
+    padding: 0;
+    margin-top: 30px;
+  }
+  .our-services .container-fluid .service-slider .swiper-scrollbar.service-slider-scroller, .our-services .container-sm .service-slider .swiper-scrollbar.service-slider-scroller, .our-services .container-md .service-slider .swiper-scrollbar.service-slider-scroller, .our-services .container-lg .service-slider .swiper-scrollbar.service-slider-scroller, .our-services .container-xl .service-slider .swiper-scrollbar.service-slider-scroller {
+    opacity: 1 !important;
+    height: 0.2rem;
+  }
+  .our-services .container-fluid .service-slider .swiper-scrollbar.service-slider-scroller .swiper-scrollbar-drag, .our-services .container-sm .service-slider .swiper-scrollbar.service-slider-scroller .swiper-scrollbar-drag, .our-services .container-md .service-slider .swiper-scrollbar.service-slider-scroller .swiper-scrollbar-drag, .our-services .container-lg .service-slider .swiper-scrollbar.service-slider-scroller .swiper-scrollbar-drag, .our-services .container-xl .service-slider .swiper-scrollbar.service-slider-scroller .swiper-scrollbar-drag {
+    background: #707070;
+  }
+  body.dark-mode .datastorm-help .container-fluid .row .col .left-part, body.dark-mode .datastorm-help .container-sm .row .col .left-part, body.dark-mode .datastorm-help .container-md .row .col .left-part, body.dark-mode .datastorm-help .container-lg .row .col .left-part, body.dark-mode .datastorm-help .container-xl .row .col .left-part {
+    max-width: 765px;
+  }
+  body.dark-mode .datastorm-help .container-fluid .row .col .left-part h3, body.dark-mode .datastorm-help .container-sm .row .col .left-part h3, body.dark-mode .datastorm-help .container-md .row .col .left-part h3, body.dark-mode .datastorm-help .container-lg .row .col .left-part h3, body.dark-mode .datastorm-help .container-xl .row .col .left-part h3 {
+    color: #f9cdcd !important;
+  }
+  body.dark-mode .datastorm-help .container-fluid .row .col .left-part p, body.dark-mode .datastorm-help .container-sm .row .col .left-part p, body.dark-mode .datastorm-help .container-md .row .col .left-part p, body.dark-mode .datastorm-help .container-lg .row .col .left-part p, body.dark-mode .datastorm-help .container-xl .row .col .left-part p {
+    color: #f9cdcd !important;
+  }
+  body.dark-mode .datastorm-help .container-fluid .row .col .left-part a, body.dark-mode .datastorm-help .container-sm .row .col .left-part a, body.dark-mode .datastorm-help .container-md .row .col .left-part a, body.dark-mode .datastorm-help .container-lg .row .col .left-part a, body.dark-mode .datastorm-help .container-xl .row .col .left-part a {
+    color: #f9cdcd !important;
+  }
+  .datastorm-help {
+    padding: 233px 0px 133px;
+  }
+  .datastorm-help .container-fluid .row .col .left-part, .datastorm-help .container-sm .row .col .left-part, .datastorm-help .container-md .row .col .left-part, .datastorm-help .container-lg .row .col .left-part, .datastorm-help .container-xl .row .col .left-part {
+    max-width: 765px;
+  }
+  .datastorm-help .container-fluid .row .col .left-part h3, .datastorm-help .container-sm .row .col .left-part h3, .datastorm-help .container-md .row .col .left-part h3, .datastorm-help .container-lg .row .col .left-part h3, .datastorm-help .container-xl .row .col .left-part h3 {
+    font-size: 75px;
+    color: #292929;
+    font-family: "I-EB";
+    text-align: justify;
+    margin: 0;
+  }
+  .datastorm-help .container-fluid .row .col .left-part p, .datastorm-help .container-sm .row .col .left-part p, .datastorm-help .container-md .row .col .left-part p, .datastorm-help .container-lg .row .col .left-part p, .datastorm-help .container-xl .row .col .left-part p {
+    font-size: 25px;
+    font-family: "I-M";
+    color: #a2a2a2;
+    margin: 0;
+  }
+  .datastorm-help .container-fluid .row .col .left-part a, .datastorm-help .container-sm .row .col .left-part a, .datastorm-help .container-md .row .col .left-part a, .datastorm-help .container-lg .row .col .left-part a, .datastorm-help .container-xl .row .col .left-part a {
+    font-size: 29px;
+    font-family: "I-M";
+    color: #000000;
+    text-decoration: none;
+    margin-top: 28px;
+    display: block;
+    line-height: 29px;
+  }
+  body.dark-mode .our-past-projects .container-fluid .section-entry, body.dark-mode .our-past-projects .container-sm .section-entry, body.dark-mode .our-past-projects .container-md .section-entry, body.dark-mode .our-past-projects .container-lg .section-entry, body.dark-mode .our-past-projects .container-xl .section-entry {
+    border-bottom: 1px solid #f9cdcd;
+  }
+  body.dark-mode .our-past-projects .container-fluid .section-entry .col .section-title h2, body.dark-mode .our-past-projects .container-sm .section-entry .col .section-title h2, body.dark-mode .our-past-projects .container-md .section-entry .col .section-title h2, body.dark-mode .our-past-projects .container-lg .section-entry .col .section-title h2, body.dark-mode .our-past-projects .container-xl .section-entry .col .section-title h2 {
+    color: #f9cdcd;
+  }
+  body.dark-mode .our-past-projects .container-fluid .section-entry .col .section-cta a, body.dark-mode .our-past-projects .container-sm .section-entry .col .section-cta a, body.dark-mode .our-past-projects .container-md .section-entry .col .section-cta a, body.dark-mode .our-past-projects .container-lg .section-entry .col .section-cta a, body.dark-mode .our-past-projects .container-xl .section-entry .col .section-cta a {
+    color: #f9cdcd;
+  }
+  body.dark-mode .our-past-projects .container-fluid .past-projects-list, body.dark-mode .our-past-projects .container-sm .past-projects-list, body.dark-mode .our-past-projects .container-md .past-projects-list, body.dark-mode .our-past-projects .container-lg .past-projects-list, body.dark-mode .our-past-projects .container-xl .past-projects-list {
+    border-bottom: 1px solid #f9cdcd;
+  }
+  body.dark-mode .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .project-title, body.dark-mode .our-past-projects .container-sm .past-projects-list .col .past-projects-content .project-title, body.dark-mode .our-past-projects .container-md .past-projects-list .col .past-projects-content .project-title, body.dark-mode .our-past-projects .container-lg .past-projects-list .col .past-projects-content .project-title, body.dark-mode .our-past-projects .container-xl .past-projects-list .col .past-projects-content .project-title {
+    color: #f9cdcd;
+  }
+  body.dark-mode .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .project-meta, body.dark-mode .our-past-projects .container-sm .past-projects-list .col .past-projects-content .project-meta, body.dark-mode .our-past-projects .container-md .past-projects-list .col .past-projects-content .project-meta, body.dark-mode .our-past-projects .container-lg .past-projects-list .col .past-projects-content .project-meta, body.dark-mode .our-past-projects .container-xl .past-projects-list .col .past-projects-content .project-meta {
+    color: #f9cdcd;
+  }
+  .our-past-projects.pos-fixed .our-projects-entry {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    margin: 0px auto;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 30px;
+    border-bottom: 0 !important;
+  }
+  .our-past-projects.pos-fixed .our-projects-entry .container-fluid .row.section-entry, .our-past-projects.pos-fixed .our-projects-entry .container-sm .row.section-entry, .our-past-projects.pos-fixed .our-projects-entry .container-md .row.section-entry, .our-past-projects.pos-fixed .our-projects-entry .container-lg .row.section-entry, .our-past-projects.pos-fixed .our-projects-entry .container-xl .row.section-entry {
+    border-bottom: 0px !important;
+    padding-bottom: 30px;
+  }
+  .our-past-projects {
+    padding: 82px 0px;
+  }
+  .our-past-projects .container-fluid .section-entry, .our-past-projects .container-sm .section-entry, .our-past-projects .container-md .section-entry, .our-past-projects .container-lg .section-entry, .our-past-projects .container-xl .section-entry {
+    padding-bottom: 70px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    border-bottom: 1px solid #707070;
+  }
+  .our-past-projects .container-fluid .section-entry .col .section-title, .our-past-projects .container-sm .section-entry .col .section-title, .our-past-projects .container-md .section-entry .col .section-title, .our-past-projects .container-lg .section-entry .col .section-title, .our-past-projects .container-xl .section-entry .col .section-title {
+    width: 100%;
+    max-width: 240px;
+  }
+  .our-past-projects .container-fluid .section-entry .col .section-title h2, .our-past-projects .container-sm .section-entry .col .section-title h2, .our-past-projects .container-md .section-entry .col .section-title h2, .our-past-projects .container-lg .section-entry .col .section-title h2, .our-past-projects .container-xl .section-entry .col .section-title h2 {
+    font-size: 46px;
+    line-height: 50px;
+    color: #292929;
+    font-family: "I-B";
+    margin-bottom: 0;
+  }
+  .our-past-projects .container-fluid .section-entry .col .section-cta a, .our-past-projects .container-sm .section-entry .col .section-cta a, .our-past-projects .container-md .section-entry .col .section-cta a, .our-past-projects .container-lg .section-entry .col .section-cta a, .our-past-projects .container-xl .section-entry .col .section-cta a {
+    font-size: 25px;
+    font-family: "I-SB";
+    color: #000000;
+    text-decoration: none;
+  }
+  .our-past-projects .container-fluid .past-projects-list, .our-past-projects .container-sm .past-projects-list, .our-past-projects .container-md .past-projects-list, .our-past-projects .container-lg .past-projects-list, .our-past-projects .container-xl .past-projects-list {
+    padding-top: 28px;
+    margin-bottom: 92px;
+    border-top: 1px solid #707070;
+  }
+  .our-past-projects .container-fluid .past-projects-list:hover .col .past-projects-content .project-title, .our-past-projects .container-sm .past-projects-list:hover .col .past-projects-content .project-title, .our-past-projects .container-md .past-projects-list:hover .col .past-projects-content .project-title, .our-past-projects .container-lg .past-projects-list:hover .col .past-projects-content .project-title, .our-past-projects .container-xl .past-projects-list:hover .col .past-projects-content .project-title {
+    text-decoration: underline;
+  }
+  .our-past-projects .container-fluid .past-projects-list:hover .col .past-projects-image a img, .our-past-projects .container-sm .past-projects-list:hover .col .past-projects-image a img, .our-past-projects .container-md .past-projects-list:hover .col .past-projects-image a img, .our-past-projects .container-lg .past-projects-list:hover .col .past-projects-image a img, .our-past-projects .container-xl .past-projects-list:hover .col .past-projects-image a img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-image, .our-past-projects .container-sm .past-projects-list .col .past-projects-image, .our-past-projects .container-md .past-projects-list .col .past-projects-image, .our-past-projects .container-lg .past-projects-list .col .past-projects-image, .our-past-projects .container-xl .past-projects-list .col .past-projects-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-image a, .our-past-projects .container-sm .past-projects-list .col .past-projects-image a, .our-past-projects .container-md .past-projects-list .col .past-projects-image a, .our-past-projects .container-lg .past-projects-list .col .past-projects-image a, .our-past-projects .container-xl .past-projects-list .col .past-projects-image a {
+    display: block;
+    outline: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-image a img, .our-past-projects .container-sm .past-projects-list .col .past-projects-image a img, .our-past-projects .container-md .past-projects-list .col .past-projects-image a img, .our-past-projects .container-lg .past-projects-list .col .past-projects-image a img, .our-past-projects .container-xl .past-projects-list .col .past-projects-image a img {
+    -webkit-transition: -webkit-transform 0.3s, -webkit-filter 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s, -webkit-filter 0.3s ease-in-out;
+    transition: transform 0.3s, filter 0.3s ease-in-out;
+    transition: transform 0.3s, filter 0.3s ease-in-out, -webkit-transform 0.3s, -webkit-filter 0.3s ease-in-out;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content, .our-past-projects .container-sm .past-projects-list .col .past-projects-content, .our-past-projects .container-md .past-projects-list .col .past-projects-content, .our-past-projects .container-lg .past-projects-list .col .past-projects-content, .our-past-projects .container-xl .past-projects-list .col .past-projects-content {
+    height: 100%;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-sm .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-md .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-lg .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-xl .past-projects-list .col .past-projects-content .project-title {
+    display: block;
+    width: 85%;
+    max-width: 700px;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #292929;
+    font-family: "I-M";
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-sm .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-md .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-lg .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-xl .past-projects-list .col .past-projects-content .project-meta {
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #292929;
+    font-family: "I-M";
+    outline: none;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .next-arrow, .our-past-projects .container-sm .past-projects-list .col .past-projects-content .next-arrow, .our-past-projects .container-md .past-projects-list .col .past-projects-content .next-arrow, .our-past-projects .container-lg .past-projects-list .col .past-projects-content .next-arrow, .our-past-projects .container-xl .past-projects-list .col .past-projects-content .next-arrow {
+    top: 0;
+    right: 0;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .next-arrow a, .our-past-projects .container-sm .past-projects-list .col .past-projects-content .next-arrow a, .our-past-projects .container-md .past-projects-list .col .past-projects-content .next-arrow a, .our-past-projects .container-lg .past-projects-list .col .past-projects-content .next-arrow a, .our-past-projects .container-xl .past-projects-list .col .past-projects-content .next-arrow a {
+    display: block;
+    outline: none;
+  }
+  .partners {
+    padding: 82px 0px;
+  }
+  .partners .container-fluid .row .col .section-title, .partners .container-sm .row .col .section-title, .partners .container-md .row .col .section-title, .partners .container-lg .row .col .section-title, .partners .container-xl .row .col .section-title {
+    width: 100%;
+    max-width: 450px;
+  }
+  .partners .container-fluid .row .col .section-title h2, .partners .container-sm .row .col .section-title h2, .partners .container-md .row .col .section-title h2, .partners .container-lg .row .col .section-title h2, .partners .container-xl .row .col .section-title h2 {
+    font-size: 46px;
+    line-height: 50px;
+    color: #292929;
+    font-family: "I-B";
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-bottom: 84px;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-wrapper, .partners .container-sm .partners-list-slider .swiper-wrapper, .partners .container-md .partners-list-slider .swiper-wrapper, .partners .container-lg .partners-list-slider .swiper-wrapper, .partners .container-xl .partners-list-slider .swiper-wrapper {
+    margin-bottom: 297px;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-wrapper .partners-list, .partners .container-sm .partners-list-slider .swiper-wrapper .partners-list, .partners .container-md .partners-list-slider .swiper-wrapper .partners-list, .partners .container-lg .partners-list-slider .swiper-wrapper .partners-list, .partners .container-xl .partners-list-slider .swiper-wrapper .partners-list {
+    padding-top: 50px;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo, .partners .container-sm .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo, .partners .container-md .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo, .partners .container-lg .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo, .partners .container-xl .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo {
+    position: relative;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo::after, .partners .container-sm .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo::after, .partners .container-md .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo::after, .partners .container-lg .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo::after, .partners .container-xl .partners-list-slider .swiper-wrapper .partners-list .partner-brand-logo::after {
+    content: "";
+    border-bottom: 3px solid #000;
+    width: 57px;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-wrapper .partners-list .partner-title, .partners .container-sm .partners-list-slider .swiper-wrapper .partners-list .partner-title, .partners .container-md .partners-list-slider .swiper-wrapper .partners-list .partner-title, .partners .container-lg .partners-list-slider .swiper-wrapper .partners-list .partner-title, .partners .container-xl .partners-list-slider .swiper-wrapper .partners-list .partner-title {
+    margin-top: 116px;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "I-B";
+    color: #000;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-wrapper .partners-list .partner-desc, .partners .container-sm .partners-list-slider .swiper-wrapper .partners-list .partner-desc, .partners .container-md .partners-list-slider .swiper-wrapper .partners-list .partner-desc, .partners .container-lg .partners-list-slider .swiper-wrapper .partners-list .partner-desc, .partners .container-xl .partners-list-slider .swiper-wrapper .partners-list .partner-desc {
+    padding-top: 18px;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "I-M";
+    color: #000;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-scrollbar.partners-slider-scroller, .partners .container-sm .partners-list-slider .swiper-scrollbar.partners-slider-scroller, .partners .container-md .partners-list-slider .swiper-scrollbar.partners-slider-scroller, .partners .container-lg .partners-list-slider .swiper-scrollbar.partners-slider-scroller, .partners .container-xl .partners-list-slider .swiper-scrollbar.partners-slider-scroller {
+    opacity: 1 !important;
+    height: 1px;
+  }
+  .partners .container-fluid .partners-list-slider .swiper-scrollbar.partners-slider-scroller .swiper-scrollbar-drag, .partners .container-sm .partners-list-slider .swiper-scrollbar.partners-slider-scroller .swiper-scrollbar-drag, .partners .container-md .partners-list-slider .swiper-scrollbar.partners-slider-scroller .swiper-scrollbar-drag, .partners .container-lg .partners-list-slider .swiper-scrollbar.partners-slider-scroller .swiper-scrollbar-drag, .partners .container-xl .partners-list-slider .swiper-scrollbar.partners-slider-scroller .swiper-scrollbar-drag {
+    background: #707070;
+  }
   .product-history-parallax {
     height: 693px;
     background-position: center center;
     background-size: 100% cover;
     background-repeat: no-repeat;
   }
-  .product-history-parallax .container .parallax-content {
+  .product-history-parallax .container-fluid .parallax-content, .product-history-parallax .container-sm .parallax-content, .product-history-parallax .container-md .parallax-content, .product-history-parallax .container-lg .parallax-content, .product-history-parallax .container-xl .parallax-content {
     max-width: 710px;
     padding-top: 159px;
   }
-  .product-history-parallax .container .parallax-content h2 {
+  .product-history-parallax .container-fluid .parallax-content h2, .product-history-parallax .container-sm .parallax-content h2, .product-history-parallax .container-md .parallax-content h2, .product-history-parallax .container-lg .parallax-content h2, .product-history-parallax .container-xl .parallax-content h2 {
     font-size: 62px;
     color: #fff;
   }
@@ -16962,30 +17326,30 @@ button.swiper-pagination-bullet {
   .trusted-parteners {
     padding: 100px 0px;
   }
-  .trusted-parteners .container .row .trusted-partener-left {
+  .trusted-parteners .container-fluid .row .trusted-partener-left, .trusted-parteners .container-sm .row .trusted-partener-left, .trusted-parteners .container-md .row .trusted-partener-left, .trusted-parteners .container-lg .row .trusted-partener-left, .trusted-parteners .container-xl .row .trusted-partener-left {
     width: 37.5%;
     border-right: 3px solid #e6e6e6;
   }
-  .trusted-parteners .container .row .trusted-partener-left .content-area {
+  .trusted-parteners .container-fluid .row .trusted-partener-left .content-area, .trusted-parteners .container-sm .row .trusted-partener-left .content-area, .trusted-parteners .container-md .row .trusted-partener-left .content-area, .trusted-parteners .container-lg .row .trusted-partener-left .content-area, .trusted-parteners .container-xl .row .trusted-partener-left .content-area {
     padding: 50px 0px;
   }
-  .trusted-parteners .container .row .trusted-partener-left .content-area h2 {
+  .trusted-parteners .container-fluid .row .trusted-partener-left .content-area h2, .trusted-parteners .container-sm .row .trusted-partener-left .content-area h2, .trusted-parteners .container-md .row .trusted-partener-left .content-area h2, .trusted-parteners .container-lg .row .trusted-partener-left .content-area h2, .trusted-parteners .container-xl .row .trusted-partener-left .content-area h2 {
     font-size: 48px;
     color: #292929;
     font-family: "SF-Black";
     margin: 0;
     padding-bottom: 15px;
   }
-  .trusted-parteners .container .row .trusted-partener-left .content-area p {
+  .trusted-parteners .container-fluid .row .trusted-partener-left .content-area p, .trusted-parteners .container-sm .row .trusted-partener-left .content-area p, .trusted-parteners .container-md .row .trusted-partener-left .content-area p, .trusted-parteners .container-lg .row .trusted-partener-left .content-area p, .trusted-parteners .container-xl .row .trusted-partener-left .content-area p {
     max-width: 409px;
     font-size: 25px;
     font-family: "SF-SB";
     color: #686868;
   }
-  .trusted-parteners .container .row .trusted-partener-right {
+  .trusted-parteners .container-fluid .row .trusted-partener-right, .trusted-parteners .container-sm .row .trusted-partener-right, .trusted-parteners .container-md .row .trusted-partener-right, .trusted-parteners .container-lg .row .trusted-partener-right, .trusted-parteners .container-xl .row .trusted-partener-right {
     width: 62.5%;
   }
-  .trusted-parteners .container .row .trusted-partener-right .row {
+  .trusted-parteners .container-fluid .row .trusted-partener-right .row, .trusted-parteners .container-sm .row .trusted-partener-right .row, .trusted-parteners .container-md .row .trusted-partener-right .row, .trusted-parteners .container-lg .row .trusted-partener-right .row, .trusted-parteners .container-xl .row .trusted-partener-right .row {
     padding: 40px 0px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -16994,28 +17358,27 @@ button.swiper-pagination-bullet {
   .dream-furniture {
     padding: 145px 0px;
   }
-  .dream-furniture .container .dream-furniture-content {
+  .dream-furniture .container-fluid .dream-furniture-content, .dream-furniture .container-sm .dream-furniture-content, .dream-furniture .container-md .dream-furniture-content, .dream-furniture .container-lg .dream-furniture-content, .dream-furniture .container-xl .dream-furniture-content {
     border-bottom: 3px solid #929394;
     padding-bottom: 38px;
   }
-  .dream-furniture .container .dream-furniture-content .content-area {
+  .dream-furniture .container-fluid .dream-furniture-content .content-area, .dream-furniture .container-sm .dream-furniture-content .content-area, .dream-furniture .container-md .dream-furniture-content .content-area, .dream-furniture .container-lg .dream-furniture-content .content-area, .dream-furniture .container-xl .dream-furniture-content .content-area {
     max-width: 1378px;
   }
-  .dream-furniture .container .dream-furniture-content .content-area h3 {
+  .dream-furniture .container-fluid .dream-furniture-content .content-area h3, .dream-furniture .container-sm .dream-furniture-content .content-area h3, .dream-furniture .container-md .dream-furniture-content .content-area h3, .dream-furniture .container-lg .dream-furniture-content .content-area h3, .dream-furniture .container-xl .dream-furniture-content .content-area h3 {
     font-size: 54px;
     color: #292929;
     font-family: "SF-Black";
     line-height: 65px;
     margin: 0px;
   }
-  .dream-furniture .container .dream-furniture-content .content-area h3 span {
+  .dream-furniture .container-fluid .dream-furniture-content .content-area h3 span, .dream-furniture .container-sm .dream-furniture-content .content-area h3 span, .dream-furniture .container-md .dream-furniture-content .content-area h3 span, .dream-furniture .container-lg .dream-furniture-content .content-area h3 span, .dream-furniture .container-xl .dream-furniture-content .content-area h3 span {
     color: #cf7148;
   }
   .container {
     max-width: 1240px;
   }
   .section-2 {
-    background-color: #f0f0f0;
     padding-top: 163px;
     padding-bottom: 135px;
   }
@@ -17060,7 +17423,6 @@ button.swiper-pagination-bullet {
   }
   .what-exactly {
     padding: 145px 0px;
-    background-color: #f0f0f0;
   }
   .what-exactly .row .parallax-content h2 {
     font-size: 65px;
@@ -17153,42 +17515,39 @@ button.swiper-pagination-bullet {
   .contact-us-main .contact-us-outer .h-line6 {
     right: 10%;
   }
-  .contact-us-main .contact-us-outer .container {
-    max-width: 1240px;
-  }
-  .contact-us-main .contact-us-outer .container .contact-content {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content, .contact-us-main .contact-us-outer .container-sm .contact-content, .contact-us-main .contact-us-outer .container-md .contact-content, .contact-us-main .contact-us-outer .container-lg .contact-content, .contact-us-main .contact-us-outer .container-xl .contact-content {
     padding-top: 323px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part {
     max-width: 627px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part h1 {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part h1, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part h1, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part h1, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part h1, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part h1 {
     font-size: 90px;
     font-family: "I-L";
     line-height: 120px;
     color: #000;
     margin: 0px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .divider {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .divider, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .divider, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .divider, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .divider, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .divider {
     width: 66px;
     height: 9px;
     background-color: #000;
     margin-top: 26px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .contact-description {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .contact-description, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .contact-description, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .contact-description, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .contact-description, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .contact-description {
     max-width: 530px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .contact-description p {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .contact-description p, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .contact-description p, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .contact-description p, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .contact-description p, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .contact-description p {
     font-size: 19px;
     color: #818181;
     font-family: "SF-M";
     margin: 0;
     padding-top: 41px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .contact-via {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .contact-via, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .contact-via, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .contact-via, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .contact-via, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .contact-via {
     margin-top: 79px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .contact-via p {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .contact-via p, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .contact-via p, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .contact-via p, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .contact-via p, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .contact-via p {
     color: #000;
     font-family: "I-M";
     font-size: 17px;
@@ -17196,24 +17555,24 @@ button.swiper-pagination-bullet {
     line-height: 20px;
     padding-bottom: 14px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .contact-via p a {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .contact-via p a, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .contact-via p a, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .contact-via p a, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .contact-via p a, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .contact-via p a {
     color: #000;
     text-decoration: none;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .contact-via p:last-child {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .contact-via p:last-child, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .contact-via p:last-child, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .contact-via p:last-child, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .contact-via p:last-child, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .contact-via p:last-child {
     padding-bottom: 0px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .timing {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .timing, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .timing, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .timing, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .timing, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .timing {
     max-width: 530px;
     margin-top: 160px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .timing strong {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .timing strong, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .timing strong, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .timing strong, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .timing strong, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .timing strong {
     font-size: 17px;
     font-family: "I-B";
     line-height: 20px;
     text-transform: uppercase;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-left-part .timing p {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-left-part .timing p, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-left-part .timing p, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-left-part .timing p, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-left-part .timing p, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-left-part .timing p {
     color: #969696;
     font-size: 17px;
     font-family: "I-M";
@@ -17221,30 +17580,30 @@ button.swiper-pagination-bullet {
     margin: 0px;
     padding-top: 7px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new {
     width: 100%;
     max-width: 615px;
     float: right;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details.v-hidden {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details.v-hidden, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details.v-hidden, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details.v-hidden, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details.v-hidden, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details.v-hidden {
     visibility: hidden !important;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage {
     width: 100%;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field {
     margin-bottom: 40px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field label {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field label, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field label, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field label, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field label, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field label {
     font-size: 35px;
     font-family: "I-L";
     margin: 0;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input {
     background: transparent;
     border-top: 0;
     border-left: 0;
@@ -17256,13 +17615,13 @@ button.swiper-pagination-bullet {
     margin-top: 15px;
     padding-left: 5px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input:focus-visible {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input:focus-visible, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input:focus-visible, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input:focus-visible, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input:focus-visible, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field input:focus-visible {
     border-top: 0;
     border-left: 0;
     border-right: 0;
     outline: none;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -17274,31 +17633,31 @@ button.swiper-pagination-bullet {
     margin-top: 5px;
     font-size: 20px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested:focus-visible {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested:focus-visible, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested:focus-visible, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested:focus-visible, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested:focus-visible, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field .interested:focus-visible {
     border-top: 0;
     border-left: 0;
     border-right: 0;
     outline: none;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field span {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field span, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field span, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field span, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field span, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .default-stage .field span {
     color: #000;
     font-family: "I-L";
     margin-top: -8px;
     padding-left: 3px;
     font-size: 40px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 {
     width: 100%;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field {
     margin-bottom: 40px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field label {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field label, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field label, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field label, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field label, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field label {
     font-size: 35px;
     font-family: "I-L";
     margin: 0;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input {
     background: transparent;
     border-top: 0;
     border-left: 0;
@@ -17310,13 +17669,13 @@ button.swiper-pagination-bullet {
     margin-top: 15px;
     padding-left: 5px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input:focus-visible {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input:focus-visible, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input:focus-visible, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input:focus-visible, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input:focus-visible, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field input:focus-visible {
     border-top: 0;
     border-left: 0;
     border-right: 0;
     outline: none;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field select {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field select, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field select, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field select, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field select, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field select {
     background: transparent;
     border-top: 0;
     border-left: 0;
@@ -17328,24 +17687,24 @@ button.swiper-pagination-bullet {
     margin-top: 15px;
     padding-left: 5px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field span {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field span, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field span, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field span, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field span, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .stage-2 .field span {
     color: #000;
     font-family: "I-L";
     margin-top: -8px;
     padding-left: 3px;
     font-size: 40px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .process {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .process, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .process, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .process, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .process, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .process {
     margin-top: 40px;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .continue {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .continue, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .continue, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .continue, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .continue, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .continue {
     color: #000;
     font-size: 35px;
     font-family: "I-L";
     text-decoration: underline;
     cursor: pointer;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .form-submit {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .form-submit, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .form-submit, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .form-submit, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .form-submit, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .form-details .process .form-submit {
     color: #000;
     font-size: 35px;
     font-family: "I-L";
@@ -17354,19 +17713,23 @@ button.swiper-pagination-bullet {
     text-decoration: underline;
     outline: none;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .stage-3 {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .stage-3, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .stage-3, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .stage-3, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .stage-3, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .stage-3 {
     width: 100%;
     text-align: right;
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .stage-3 strong {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .stage-3 strong, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .stage-3 strong, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .stage-3 strong, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .stage-3 strong, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .stage-3 strong {
     font-size: 35px;
     color: #000;
     font-family: "I-M";
   }
-  .contact-us-main .contact-us-outer .container .contact-content .row .col .contact-us-right-part-new .stages .stage-3 p {
+  .contact-us-main .contact-us-outer .container-fluid .contact-content .row .col .contact-us-right-part-new .stages .stage-3 p, .contact-us-main .contact-us-outer .container-sm .contact-content .row .col .contact-us-right-part-new .stages .stage-3 p, .contact-us-main .contact-us-outer .container-md .contact-content .row .col .contact-us-right-part-new .stages .stage-3 p, .contact-us-main .contact-us-outer .container-lg .contact-content .row .col .contact-us-right-part-new .stages .stage-3 p, .contact-us-main .contact-us-outer .container-xl .contact-content .row .col .contact-us-right-part-new .stages .stage-3 p {
     font-family: "I-L";
     font-size: 30px;
     color: #969696;
+  }
+  #footer .footer {
+    padding: 115px 0px;
+    background-color: #252422;
   }
 }
 
@@ -17378,23 +17741,44 @@ button.swiper-pagination-bullet {
     margin-left: 32px;
     padding: 0px;
   }
-  .home-banner {
-    height: 650px;
-    background-position: center center;
-    background-size: auto 100%;
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content, .our-past-projects .container-sm .past-projects-list .col .past-projects-content, .our-past-projects .container-md .past-projects-list .col .past-projects-content, .our-past-projects .container-lg .past-projects-list .col .past-projects-content, .our-past-projects .container-xl .past-projects-list .col .past-projects-content {
+    height: 100%;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-sm .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-md .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-lg .past-projects-list .col .past-projects-content .project-meta, .our-past-projects .container-xl .past-projects-list .col .past-projects-content .project-meta {
+    margin: 0;
+    bottom: 0;
+    position: absolute;
   }
 }
 
 @media (min-width: 992px) {
-  .home-banner {
-    background-position: center center;
-    height: 1079px;
+  #header .container-fluid, #header .container-sm, #header .container-md, #header .container-lg, #header .container-xl {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  main .container-fluid, main .container-sm, main .container-md, main .container-lg, main .container-xl {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #header .container-fluid, #header .container-sm, #header .container-md, #header .container-lg, #header .container-xl {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  main .container-fluid, main .container-sm, main .container-md, main .container-lg, main .container-xl {
+    padding-left: 140px;
+    padding-right: 140px;
   }
 }
 
 @media (min-width: 1600px) {
+  .our-past-projects.pos-fixed .container .row.section-entry {
+    max-width: 1510px;
+  }
   .navbar {
-    max-width: 1510px !important;
+    max-width: 1641px !important;
   }
   .contact-us-outer .container {
     max-width: 1510px !important;
@@ -17405,12 +17789,8 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 1920px) {
-  .home-banner {
-    background-position: center center;
-    height: 1079px;
-  }
-  .home-banner .container {
-    max-width: 1510px;
+  .our-past-projects.pos-fixed .container-fluid .row.section-entry, .our-past-projects.pos-fixed .container-sm .row.section-entry, .our-past-projects.pos-fixed .container-md .row.section-entry, .our-past-projects.pos-fixed .container-lg .row.section-entry, .our-past-projects.pos-fixed .container-xl .row.section-entry {
+    max-width: 1641px;
   }
   .section-2 .production-history .production-left-part h2 {
     font-size: 92px;
@@ -17424,21 +17804,24 @@ button.swiper-pagination-bullet {
   .trusted-parteners {
     padding: 215px 0px;
   }
-  .trusted-parteners .container .row .trusted-partener-left .content-area h2 {
+  .trusted-parteners .container-fluid .row .trusted-partener-left .content-area h2, .trusted-parteners .container-sm .row .trusted-partener-left .content-area h2, .trusted-parteners .container-md .row .trusted-partener-left .content-area h2, .trusted-parteners .container-lg .row .trusted-partener-left .content-area h2, .trusted-parteners .container-xl .row .trusted-partener-left .content-area h2 {
     font-size: 65px;
   }
   .dream-furniture {
     padding: 145px 0px;
   }
-  .dream-furniture .container .dream-furniture-content .content-area {
+  .dream-furniture .container-fluid .dream-furniture-content .content-area, .dream-furniture .container-sm .dream-furniture-content .content-area, .dream-furniture .container-md .dream-furniture-content .content-area, .dream-furniture .container-lg .dream-furniture-content .content-area, .dream-furniture .container-xl .dream-furniture-content .content-area {
     max-width: 1378px;
   }
-  .dream-furniture .container .dream-furniture-content .content-area h3 {
+  .dream-furniture .container-fluid .dream-furniture-content .content-area h3, .dream-furniture .container-sm .dream-furniture-content .content-area h3, .dream-furniture .container-md .dream-furniture-content .content-area h3, .dream-furniture .container-lg .dream-furniture-content .content-area h3, .dream-furniture .container-xl .dream-furniture-content .content-area h3 {
     font-size: 65px;
   }
-  .container {
-    max-width: 1598px;
-    padding: 0px;
+  .datastorm-help .container-fluid .row .col .left-part h3, .datastorm-help .container-sm .row .col .left-part h3, .datastorm-help .container-md .row .col .left-part h3, .datastorm-help .container-lg .row .col .left-part h3, .datastorm-help .container-xl .row .col .left-part h3 {
+    font-size: 120px;
+  }
+  .our-past-projects .container-fluid .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-sm .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-md .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-lg .past-projects-list .col .past-projects-content .project-title, .our-past-projects .container-xl .past-projects-list .col .past-projects-content .project-title {
+    font-size: 46px;
+    line-height: 46px;
   }
 }
 /*# sourceMappingURL=datastorm.css.map */
